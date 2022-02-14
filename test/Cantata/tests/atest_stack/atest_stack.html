@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Test Results</title>
+    <meta charset='UTF-8'>
+    <style>
+* {
+padding: 3px 0 3px 3px;
+font-family: Arial, Helvetica, Sans-serif;
+font-size: 10pt
+}
+
+table {
+width: 100%;
+}
+
+.body {
+padding: 10px;
+margin-top: 3px;
+margin-bottom: 10px;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+width: 98%;
+height: 100%;
+font-size: 12px;
+color: #000000;
+background: #FFFFFF;
+}
+.h2 {
+background-color: #FFFFFF;
+text-align: left;
+margin-top: 0;
+padding: 10px 0px 5px 0px;
+margin: 0em;
+font-weight: bold;
+font-size: 18px;
+color: #9E334C;
+}
+
+.reportHeader {
+padding: 20px;
+background: #818B8A;
+}
+.reportHeader div {
+margin: 0em;
+font-weight: bold;
+font-size: 24px;
+color: #FFFFFF;
+}
+div.header_details > div.key {
+font-size: 16px;
+display: inline-block;
+width: 20%;
+}
+div.header_details > div.value {
+font-size: 16px;
+display: inline-block;
+width: 70%;
+}
+
+.summaryInfo {
+padding: 3px 3px 3px 3px;
+margin: 0em;
+font-size: 16px;
+color: #FFFFFF;
+background: #818B8A;
+}
+
+.summary {
+color: black;
+font-size: 12;
+background: none;
+}
+
+.ScriptError .summary {
+font-weight: bold;
+}
+
+.overview_header {
+border-collapse: collapse;
+margin: 0 0 25px 0;
+}
+.overview_header td {
+border-style: solid;
+border-width: 1px;
+border-color: rgb(204,204,204);
+background-color: rgb(221,221,221);
+border-bottom: solid;
+border-width-bottom: thick;
+text-align:center;
+padding: 10px;
+font-weight: bold;
+}
+.overview_header .state {
+font-size: 14pt;
+}
+.overview_header .script_errors,
+.overview_header .checks_failed,
+.overview_header .call_seq_failures,
+.overview_header .state.FAIL {
+border-bottom-color: #C80000;
+}
+.overview_header .checks_passed,
+.overview_header .state.PASS {
+border-bottom-color: green;
+}
+.overview_header .checks_warned,
+.overview_header .state.WARNED {
+border-bottom-color: #ff9700;
+}
+
+div.Test,
+div.Step,
+div.Coverage,
+div.CoverageFunctionEnterExit {
+margin: 14px auto;
+padding: 0 0 0 0px;
+}
+div.Test:nth-child(odd) .overview {
+background-color: #F7F6FA;
+}
+div.Test:nth-child(even) .overview {
+background-color: #EAEAEA;
+}
+
+.details {
+color: black;
+}
+div.details {
+margin-left: 30px;
+}
+div.details > div.key,
+div.details > div.value {
+display: inline-block;
+width: 45%;
+background-color: #f2f2f2;
+margin: 2px;
+padding: 3px 0 3px 10px;
+}
+
+.CoverageEntry,
+.CoverageDetails, 
+.CoverageFunctionDescription {
+padding: 0px 3px 0px 3px;
+background: #e5edfa;
+color: black;
+}
+.CoverageFunction {
+font-size: 12pt;
+margin-top: 5px;
+}
+.CoverageFunction {
+padding-bottom: 5px;
+background: #e5edfa;
+color: black;
+font-weight: bold;
+}
+
+
+div.CoverageEntry {
+background-color: #f8f8f8;
+border-color: #e5edfa;
+border-style: solid;
+border-width: 2px 15 0 30px;
+
+}
+div.CoverageEntry > div {
+display: inline-block;
+}
+div.CoverageEntry > div.location { width: 30%; }
+div.CoverageEntry > div.entry_type { width: 12%; }
+div.CoverageEntry > div.count { width: 8%; }
+div.CoverageEntry > div.coverage_details { width: 25%; }
+div.CoverageEntry > div.summary { width: 20%; }
+
+div.CoverageDetails > div {
+display: inline-block;
+}
+div.CoverageDetails > div.location { width: 30%; }
+div.CoverageDetails > div.extra { width: 10%; }
+div.CoverageDetails > div.category { width: 20%; }
+div.CoverageDetails > div.coverage_details { width: 10%; }
+
+.CoverageFunctionDescription > div {
+display: inline-block;
+}
+div.CoverageFunctionDescription > div.location { width: 30%; }
+div.CoverageFunctionDescription > div.extra { width: 10%; }
+
+div.CoverageSummary > div {
+display: inline-block;
+}
+div.CoverageSummary > div.summary_coverage_type { width: 20%; }
+div.CoverageSummary > div.executed_infeasible { width: 10%; }
+div.CoverageSummary > div.overall_wavg { width: 10%; }
+div.CoverageSummary > div.stat_avg { width: 10%; }
+div.CoverageSummary > div.stat_min { width: 10%; }
+div.CoverageSummary > div.stat_max { width: 10%; }
+div.CoverageSummary > div.stat_dev { width: 10%; }
+div.CoverageSummary > div.stat_num { width: 10%; }
+
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #f2f2f8;}
+
+
+.overview > label {
+cursor: pointer;
+padding: 3px;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+font-weight: bold;
+}
+.overview {
+display: flex;
+flex-direction: row;
+}
+.overview > .name {
+width: 40%;
+color: black;
+font-weight: normal;
+}
+.overview > .state {
+width: 60%;
+color: black;
+}
+.coverage .overview > .name {
+width: 20%;
+}
+.coverage .overview > .state {
+width: 80%;
+}
+.overview:hover > .name,
+.overview:hover > .state {
+color: blue;
+}
+label.state span.Passed,
+label.state span.PASSED {
+color: green;
+}
+label.state span.FAILED,
+label.state span.Error,
+label.state span.ERROR {
+color: #C80000;
+}
+label.icon svg {
+padding: 0 5px 0 0;
+}
+[type='checkbox'] {
+display: none;
+}
+[type='checkbox']:checked ~ .details, 
+[type='checkbox']:checked ~ .overview .collapse_icon {
+display: none;
+}
+[type='checkbox']:checked ~ .overview .expand_icon {
+display: inline;
+}
+.overview .collapse_icon {
+display: inline;
+}
+.overview .expand_icon {
+display: none;
+}
+.collapse_icon,
+.expand_icon {
+height: 22px;
+}
+
+.User {
+padding: 3px 3px 3px 3px;
+background: #ededed;
+color: black;
+}
+pre {
+display: block;
+font-family: monospace;
+white-space: pre;
+margin: 0em 0px;
+font-size: 8pt
+}
+
+.CheckMemorySummary,
+div.CallSequence,
+div.Instance {
+color: black;
+}
+
+.reportFooter {
+text-align: center;
+font-size: 11px;
+margin-bottom: 10px;
+padding: 0px;
+}
+.reportFooter table {
+padding: 0px;
+}
+tr.FooterResult {
+color: black;
+}
+td.TestResult.PASS {
+color: green;
+}
+td.TestResult.WARNED {
+color: #ff9700;
+}
+td.TestResult.FAIL,
+div.CoverageEntry > div.NOT.EXECUTED,
+div.CoverageEntry > div.INFEASIBLE,
+div.CoverageEntry > div.NOT.EFFECTIVE {
+color: #C80000;
+font-weight: bold;
+}
+th {
+padding: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(204,204,204);
+background-color: rgb(221,221,221);
+font-weight: bold;
+font-size: 10pt
+}
+.cell {
+padding: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(204,204,204);
+font-size: 10pt
+}
+
+.cellNoBorder {
+padding: 3px 3px 3px 3px;
+font-size: 10pt;
+}
+
+b.Passed,
+b.PASSED {
+color: green;
+}
+b.WARNED,
+b.Warning {
+color: #ff9700;
+}
+b.FAILED,
+b.Error {
+color: #C80000;
+}
+
+.active,
+div.Passed,
+div.PASSED,
+div.WARNED,
+div.Warning,
+div.FAILED,
+div.Error,
+div.ScriptError.error,
+div.Coverage,
+div.CoverageFunctionEnterExit {
+border-style: solid;
+border-width: 1px 0 0 4px;
+}
+div.Passed,
+div.PASSED {
+border-color: green;
+}
+div.WARNED,
+div.Warning {
+border-color: gold;
+}
+div.FAILED,
+div.Error {
+border-color: #C80000;
+}
+div.Coverage,
+div.CoverageFunctionEnterExit {
+border-color: lightblue;
+}
+
+div.ExpectedCalls {
+border-style:solid;
+border-width: 1px 0 0 3px;
+border-color: grey;
+color: black;
+
+}
+</style>
+
+  </head>
+  <body>
+    <div class='Header reportHeader'>
+  <div class='header_details'>    <div>Cantata Test Harness v9.5 (c) 2021 QA Systems GmbH</div>
+    <div class='key'>Test Description:</div><div class='value'>stack</div>
+    <div class='key'>Configuration:</div><div class='value'>x86-Win32-gpp4.9.2</div>
+    <div class='key'>Test Started:</div><div class='value'>Fri Feb 11 15:47:38 2022</div>
+    <div class='key'>Test Ended:</div><div class='value'>Fri Feb 11 15:47:38 2022</div>
+  </div></div>
+<table class='overview_header'>
+  <tr>
+    <td colspan='5' class='state PASS'>Overall Result: PASS</td>
+  </tr>
+  <tr>
+    <td class='script_errors'>0 Script Errors</td>
+    <td class='checks_failed'>0 Checks Failed</td>
+    <td class='checks_passed'>47 Checks Passed</td>
+    <td class='checks_warned'>0 Checks Warned</td>
+    <td class='call_seq_failures'>0 Call Sequence Failures</td>
+  </tr>
+</table>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details2' checked />
+  <div class='overview'>
+    <label for='hide_details2' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details2' class='name'>Test case: 1: Stack</label>
+    <label for='hide_details2' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>default case</pre>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    returnValue-&gt;head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details12' checked />
+  <div class='overview'>
+    <label for='hide_details12' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details12' class='name'>Test case: 2: Stack(const Stack &amp;)</label>
+    <label for='hide_details12' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>default case</pre>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    returnValue-&gt;head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    stack.head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details23' checked />
+  <div class='overview'>
+    <label for='hide_details23' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details23' class='name'>Test case: 3: Stack(const Stack &amp;)</label>
+    <label for='hide_details23' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>created to solve true case of stack_ptr != NULL at line number 31</pre>
+<div class='ExpectedCalls'>
+  <b class=''>: Expected Calls:</b>
+  <div>Stack::push(int)#1</div>
+</div>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> Stack::push(int)
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 1
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        Stack::push(int)#1
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    value = 0
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    returnValue-&gt;head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    stack.head = &amp;map_stack_head[0]
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0x442044</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+    Stack::push(int)#1
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details39' checked />
+  <div class='overview'>
+    <label for='hide_details39' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details39' class='name'>Test case: 4: is_empty</label>
+    <label for='hide_details39' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>default case</pre>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    testObj-&gt;head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    returnValue = true
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>1</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details50' checked />
+  <div class='overview'>
+    <label for='hide_details50' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details50' class='name'>Test case: 5: push(int)</label>
+    <label for='hide_details50' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>default case</pre>
+<div class='ExpectedCalls'>
+  <b class=''>: Expected Calls:</b>
+  <div>operator_new(std::size_t)#1</div>
+</div>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> operator_new(std::size_t)
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 1
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        operator_new(std::size_t)#1
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    cppsm_size = 8U
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>8</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    testObj-&gt;head = &amp;map_operator_new_call1[0]
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0x44204c</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+    operator_new(std::size_t)#1
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details65' checked />
+  <div class='overview'>
+    <label for='hide_details65' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details65' class='name'>Test case: 6: push(int)</label>
+    <label for='hide_details65' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>created to solve catch handler at line number 73</pre>
+<div class='ExpectedCalls'>
+  <b class=''>: Expected Calls:</b>
+  <div>operator_new(std::size_t)#2</div>
+</div>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> operator_new(std::size_t)
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 2
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        operator_new(std::size_t)#2
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    cppsm_size = 8U
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>8</div>
+  </div>
+</div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+Expected Exception: Stack::new_error thrownValue
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+    operator_new(std::size_t)#2
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details76' checked />
+  <div class='overview'>
+    <label for='hide_details76' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details76' class='name'>Test case: 7: pop</label>
+    <label for='hide_details76' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>default case</pre>
+<div class='ExpectedCalls'>
+  <b class=''>: Expected Calls:</b>
+  <div>Stack::is_empty()#1;operator_delete(void *)#1</div>
+</div>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> Stack::is_empty()
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 1
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        Stack::is_empty()#1
+</div>
+<div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> operator_delete(void *)
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 1
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        Stack::is_empty()#1;operator_delete(void *)#1
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    param_1 = &amp;map_testObj_head[0].data
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0x442054</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    (*((Stack::node*) param_1)).data = 0
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    (*((Stack::node*) param_1)).next = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    testObj-&gt;head = NULL
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<div class='CheckValue PASSED'>
+  <b class='PASSED'>PASSED: Check</b>
+  <div>
+    returnValue = 0
+  </div>
+  <div class='details'>
+    <div class='key'>Value:</div>
+    <div class='value'>0</div>
+  </div>
+</div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<b class='PASSED'>PASSED: Check Memory</b>
+<div></div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+No Exceptions
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+    Stack::is_empty()#1;operator_delete(void *)#1
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details97' checked />
+  <div class='overview'>
+    <label for='hide_details97' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details97' class='name'>Test case: 8: pop</label>
+    <label for='hide_details97' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>created to solve true case of is_empty() at line number 84</pre>
+<div class='ExpectedCalls'>
+  <b class=''>: Expected Calls:</b>
+  <div>Stack::is_empty()#2</div>
+</div>
+<div class='ExceptionBlock PASSED'>
+  <b class='PASSED'>PASSED: Exception Block</b>
+  <div class='details'>
+    <div class='CheckFunctionCallWrapper PASSED'>
+  <div>
+    <b class='PASSED'>PASSED: Function:</b> Stack::is_empty()
+  </div>
+  <div class='Instance'>
+  <b>Instance:</b> 2
+</div>
+
+</div>
+<div class='CallSequence'>
+  <b>Call sequence matched so far:</b>
+        Stack::is_empty()#2
+</div>
+<div class='ExceptionBlockState PASSED'>
+  <b class='PASSED'>PASSED: </b>
+Expected Exception: Stack::empty_pop thrownValue
+</div>
+
+  </div>
+  <b class='PASSED'>End Exception Block</b>
+</div>
+
+<div class='CallSequence'>
+  <b>Call sequence matched:</b>
+    Stack::is_empty()#2
+</div>
+
+  </div>
+</div>
+<div class='Test PASSED'>
+  <input type='checkbox' id='hide_details107' checked />
+  <div class='overview'>
+    <label for='hide_details107' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details107' class='name'>Test case: COVERAGE RULE SET</label>
+    <label for='hide_details107' class='state'>Result: <span class='PASSED'>PASSED</span></label>
+  </div>
+  <div class='details'>
+    <pre class='User'>100% Entry Point + Statement + Call Return + Decision + MC/DC Coverage</pre>
+<div class='Summary'><b>GET_COVERAGE_MIN:</b> entry point coverage (feasible only, including catch-clauses)
+                  for &quot;*&quot; in context &quot;*&quot; = 100.0%</div>
+<div class='CheckRange PASSED'>
+  <b class='PASSED'>PASSED: Check Range</b>
+  <div>
+    100% Entry Point Coverage
+  </div>
+  <div class='details'>
+    <div class='key'>Actual:</div>
+    <div class='value'>100</div>
+    <div class='key'>Lower:</div>
+    <div class='value'>100</div>
+    <div class='key'>Upper:</div>
+    <div class='value'>100</div>
+  </div>
+</div>
+<div class='Summary'><b>GET_COVERAGE_MIN:</b> statement coverage (feasible only, including catch-clauses)
+                  for &quot;*&quot; in context &quot;*&quot; = 100.0%</div>
+<div class='CheckRange PASSED'>
+  <b class='PASSED'>PASSED: Check Range</b>
+  <div>
+    100% Statement Coverage
+  </div>
+  <div class='details'>
+    <div class='key'>Actual:</div>
+    <div class='value'>100</div>
+    <div class='key'>Lower:</div>
+    <div class='value'>100</div>
+    <div class='key'>Upper:</div>
+    <div class='value'>100</div>
+  </div>
+</div>
+<div class='Summary'><b>GET_COVERAGE_MIN:</b> call-return coverage (feasible only, including catch-clauses)
+                  for &quot;*&quot; in context &quot;*&quot; = 100.0%</div>
+<div class='CheckRange PASSED'>
+  <b class='PASSED'>PASSED: Check Range</b>
+  <div>
+    100% Call Return Coverage
+  </div>
+  <div class='details'>
+    <div class='key'>Actual:</div>
+    <div class='value'>100</div>
+    <div class='key'>Lower:</div>
+    <div class='value'>100</div>
+    <div class='key'>Upper:</div>
+    <div class='value'>100</div>
+  </div>
+</div>
+<div class='Summary'><b>GET_COVERAGE_MIN:</b> decision coverage (feasible only, including catch-clauses)
+                  for &quot;*&quot; in context &quot;*&quot; = 100.0%</div>
+<div class='CheckRange PASSED'>
+  <b class='PASSED'>PASSED: Check Range</b>
+  <div>
+    100% Decision Coverage
+  </div>
+  <div class='details'>
+    <div class='key'>Actual:</div>
+    <div class='value'>100</div>
+    <div class='key'>Lower:</div>
+    <div class='value'>100</div>
+    <div class='key'>Upper:</div>
+    <div class='value'>100</div>
+  </div>
+</div>
+<div class='Summary'><b>GET_COVERAGE_MIN:</b> boolean operand effectiveness (feasible only, including </div>
+<pre class='User'>catch-clauses)
+                  for &quot;*&quot; in context &quot;*&quot; = 100.0%</pre>
+<div class='CheckRange PASSED'>
+  <b class='PASSED'>PASSED: Check Range</b>
+  <div>
+    100% Boolean Operand Effectiveness Coverage
+  </div>
+  <div class='details'>
+    <div class='key'>Actual:</div>
+    <div class='value'>100</div>
+    <div class='key'>Lower:</div>
+    <div class='value'>100</div>
+    <div class='key'>Upper:</div>
+    <div class='value'>100</div>
+  </div>
+</div>
+<div class='Coverage'>
+  <input type='checkbox' id='hide_details120' checked />
+  <div class='overview'>
+    <label for='hide_details120' class='icon'>      <svg class='expand_icon'   enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='8.5,3 17.5,12 8.5,21 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>      <svg class='collapse_icon' enable-background='new 0 0 24 24' viewBox='0 0 24 24' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polyline fill='none' points='21,8.5 12,17.5 3,8.5 ' stroke='#000000' stroke-miterlimit='10' stroke-width='2'/></svg>    </label>
+    <label for='hide_details120' class='name'>Coverage</label>
+    <label for='hide_details120' class='state'>entry point, call-return, statement, decision, boolean operand effectiveness, 
+                 for &quot;*&quot; in context &quot;*&quot;
+                 with executed and un-executed details
+                 feasible only, including catch-clauses</label>
+  </div>
+  <div class='details'>
+    <div class='CoverageFunction'>
+  stack.cpp(18):Stack::Stack()
+</div>
+<div class='CoverageFunctionDescription'>entry point coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(18):</div>
+   <div class='entry_type'>entry</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>8</pre></div>
+   <div class='summary '></div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>entry point coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(26):Stack::Stack(const Stack &amp;)
+</div>
+<div class='CoverageFunctionDescription'>entry point coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(26):</div>
+   <div class='entry_type'>entry</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>2</pre></div>
+   <div class='summary '></div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>entry point coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(51):Stack::is_empty()
+</div>
+<div class='CoverageFunctionDescription'>entry point coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(51):</div>
+   <div class='entry_type'>entry</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>1</pre></div>
+   <div class='summary '></div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>entry point coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(82):Stack::pop()
+</div>
+<div class='CoverageFunctionDescription'>entry point coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(82):</div>
+   <div class='entry_type'>entry</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>2</pre></div>
+   <div class='summary '></div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>entry point coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(59):Stack::push(int )
+</div>
+<div class='CoverageFunctionDescription'>entry point coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(59):</div>
+   <div class='entry_type'>entry</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>2</pre></div>
+   <div class='summary '></div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>entry point coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(18):Stack::Stack()
+</div>
+<div class='CoverageFunctionDescription'>call-return coverage details (with executed and un-executed cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>call-return coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(26):Stack::Stack(const Stack &amp;)
+</div>
+<div class='CoverageFunctionDescription'>call-return coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(33):</div>
+   <div class='entry_type'>call</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(m-func)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>call-return coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(51):Stack::is_empty()
+</div>
+<div class='CoverageFunctionDescription'>call-return coverage details (with executed and un-executed cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>call-return coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(82):Stack::pop()
+</div>
+<div class='CoverageFunctionDescription'>call-return coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(84):</div>
+   <div class='entry_type'>call</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(m-func)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(91):</div>
+   <div class='entry_type'>call</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(global-op)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>2</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>call-return coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(59):Stack::push(int )
+</div>
+<div class='CoverageFunctionDescription'>call-return coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(65):</div>
+   <div class='entry_type'>call</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(global-op)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>call-return coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(18):Stack::Stack()
+</div>
+<div class='CoverageFunctionDescription'>statement coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(20):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  8'> 8</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>statement coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(26):Stack::Stack(const Stack &amp;)
+</div>
+<div class='CoverageFunctionDescription'>statement coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(28):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(30):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(declaration)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(31):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>3</div>
+   <div class='coverage_details'><pre>(loop)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(33):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>4</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(34):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>5</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(37):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>6</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(39):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>7</div>
+   <div class='coverage_details'><pre>(declaration)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(40):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>8</div>
+   <div class='coverage_details'><pre>(loop)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(42):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>9</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(43):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>10</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(44):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>11</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>11</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>statement coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(51):Stack::is_empty()
+</div>
+<div class='CoverageFunctionDescription'>statement coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(53):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(return)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>statement coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(82):Stack::pop()
+</div>
+<div class='CoverageFunctionDescription'>statement coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(84):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(cond)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(86):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(89):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>3</div>
+   <div class='coverage_details'><pre>(declaration)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(90):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>4</div>
+   <div class='coverage_details'><pre>(declaration)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(91):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>5</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(92):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>6</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(94):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>7</div>
+   <div class='coverage_details'><pre>(return)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>7</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>statement coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(59):Stack::push(int )
+</div>
+<div class='CoverageFunctionDescription'>statement coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(61):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(declaration)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(63):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(65):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>3</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(67):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>4</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(68):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>5</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(69):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>6</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(73):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>7</div>
+   <div class='coverage_details'><pre>(other)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(76):</div>
+   <div class='entry_type'>stmnt</div>
+   <div class='count'>8</div>
+   <div class='coverage_details'><pre>(return)</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>8</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>statement coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(18):Stack::Stack()
+</div>
+<div class='CoverageFunctionDescription'>decision coverage details (with executed and un-executed cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>decision coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(26):Stack::Stack(const Stack &amp;)
+</div>
+<div class='CoverageFunctionDescription'>decision coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(31):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(while)  branch TRUE</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(31):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(while)  branch FALSE</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(40):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(while)  branch TRUE</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(40):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>2</div>
+   <div class='coverage_details'><pre>(while)  branch FALSE</pre></div>
+   <div class='summary  2'> 2</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>4</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>decision coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(51):Stack::is_empty()
+</div>
+<div class='CoverageFunctionDescription'>decision coverage details (with executed and un-executed cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>decision coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(82):Stack::pop()
+</div>
+<div class='CoverageFunctionDescription'>decision coverage details (with executed and un-executed cases)</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(84):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(if)     branch TRUE</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageEntry'>
+   <div class='location'>stack.cpp(84):</div>
+   <div class='entry_type'>decn</div>
+   <div class='count'>1</div>
+   <div class='coverage_details'><pre>(if)     branch FALSE</pre></div>
+   <div class='summary  1'> 1</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>2</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>decision coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(59):Stack::push(int )
+</div>
+<div class='CoverageFunctionDescription'>decision coverage details (with executed and un-executed cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>un-executed</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>decision coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(18):Stack::Stack()
+</div>
+<div class='CoverageFunctionDescription'>boolean operand effectiveness coverage details (with executed and un-executed 
+cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>not effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>boolean eff. coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(26):Stack::Stack(const Stack &amp;)
+</div>
+<div class='CoverageFunctionDescription'>boolean operand effectiveness coverage details (with executed and un-executed 
+cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>not effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::Stack"</div>
+  <div class='extra'></div>
+  <div class='category'>boolean eff. coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(51):Stack::is_empty()
+</div>
+<div class='CoverageFunctionDescription'>boolean operand effectiveness coverage details (with executed and un-executed 
+cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>not effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::is_empty"</div>
+  <div class='extra'></div>
+  <div class='category'>boolean eff. coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(82):Stack::pop()
+</div>
+<div class='CoverageFunctionDescription'>boolean operand effectiveness coverage details (with executed and un-executed 
+cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>not effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::pop"</div>
+  <div class='extra'></div>
+  <div class='category'>boolean eff. coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<div class='CoverageFunction'>
+  stack.cpp(59):Stack::push(int )
+</div>
+<div class='CoverageFunctionDescription'>boolean operand effectiveness coverage details (with executed and un-executed 
+cases)</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>not effective</div>
+  <div class='coverage_details'>0</div>
+</div>
+<div class='CoverageDetails'>
+  <div class='location'>"Stack::push"</div>
+  <div class='extra'></div>
+  <div class='category'>boolean eff. coverage</div>
+  <div class='coverage_details'>100.0%</div>
+</div>
+<table class='CoverageSummaryWrapper'>
+  <tr class='CoverageSummaryWrapper'>
+    <th rowspan='2'>Summary Coverage Type</th>
+    <th rowspan='2'>Executed Infeasible</th>
+    <th colspan='6'>Statistics</th>
+  </tr>
+  <tr class='CoverageSummaryWrapper'>
+    <th>Overall (wavg)</th>
+    <th>Average</th>
+    <th>Minimum</th>
+    <th>Maximum</th>
+    <th>Dev</th>
+    <th>Number</th>
+  </tr>
+    <tr class='CoverageSummary'>
+    <td class='summary_coverage_type'>entry point</td>
+    <td class='executed_infeasible'>0</td>
+    <td class='overall_wavg'>100.0%</td>
+    <td class='stat_avg'>100.0%</td>
+    <td class='stat_min'>100.0%</td>
+    <td class='stat_max'>100.0%</td>
+    <td class='stat_dev'>0.0%</td>
+    <td class='stat_num'>5</td>
+  </tr>
+  <tr class='CoverageSummary'>
+    <td class='summary_coverage_type'>call-return</td>
+    <td class='executed_infeasible'>0</td>
+    <td class='overall_wavg'>100.0%</td>
+    <td class='stat_avg'>100.0%</td>
+    <td class='stat_min'>100.0%</td>
+    <td class='stat_max'>100.0%</td>
+    <td class='stat_dev'>0.0%</td>
+    <td class='stat_num'>5</td>
+  </tr>
+  <tr class='CoverageSummary'>
+    <td class='summary_coverage_type'>statement</td>
+    <td class='executed_infeasible'>0</td>
+    <td class='overall_wavg'>100.0%</td>
+    <td class='stat_avg'>100.0%</td>
+    <td class='stat_min'>100.0%</td>
+    <td class='stat_max'>100.0%</td>
+    <td class='stat_dev'>0.0%</td>
+    <td class='stat_num'>5</td>
+  </tr>
+  <tr class='CoverageSummary'>
+    <td class='summary_coverage_type'>decision</td>
+    <td class='executed_infeasible'>0</td>
+    <td class='overall_wavg'>100.0%</td>
+    <td class='stat_avg'>100.0%</td>
+    <td class='stat_min'>100.0%</td>
+    <td class='stat_max'>100.0%</td>
+    <td class='stat_dev'>0.0%</td>
+    <td class='stat_num'>5</td>
+  </tr>
+  <tr class='CoverageSummary'>
+    <td class='summary_coverage_type'>boolean eff.</td>
+    <td class='executed_infeasible'>0</td>
+    <td class='overall_wavg'>100.0%</td>
+    <td class='stat_avg'>100.0%</td>
+    <td class='stat_min'>100.0%</td>
+    <td class='stat_max'>100.0%</td>
+    <td class='stat_dev'>0.0%</td>
+    <td class='stat_num'>5</td>
+  </tr>
+
+</table>
+
+  </div>
+</div>
+
+  </div>
+</div>
+<div class='Summary'><b>EXPORT_COVERAGE:</b> coverage data written to &quot;atest_stack.cov&quot;</div>
+<div class='Footer reportFooter'>
+  <table>
+    <tr>
+      <th>Test Case</th>
+      <th>Script Errors</th>
+      <th>Checks Failed</th>
+      <th>Checks Passed</th>
+      <th>Checks Warned</th>
+      <th>Call Sequence Failures</th>
+      <th>Test Result</th>
+    </tr>
+    <tr class='FooterResult PASS'>
+  <td class='TestCase'>1: Stack</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>5</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+<pre class='User'>= 2: Stack(const Stack &amp;)        0       0       6       0         0      PASS =
+= 3: Stack(const Stack &amp;)        0       0       7       0         0      PASS =</pre>
+<tr class='FooterResult PASS'>
+  <td class='TestCase'>4: is_empty</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>6</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+<pre class='User'>= 5: push(int)                   0       0       6       0         0      PASS =
+= 6: push(int)                   0       0       2       0         0      PASS =</pre>
+<tr class='FooterResult PASS'>
+  <td class='TestCase'>7: pop</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>9</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+<tr class='FooterResult PASS'>
+  <td class='TestCase'>8: pop</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>1</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+<tr class='FooterResult PASS'>
+  <td class='TestCase'>COVERAGE RULE SET</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>5</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+<tr class='FooterResult PASS'>
+  <td class='TestCase'>Other</td>
+  <td class='ScriptErrors'>0</td>
+  <td class='ChecksFailed'>0</td>
+  <td class='ChecksPassed'>0</td>
+  <td class='ChecksWarned'>0</td>
+  <td class='CallSequenceFailures'>0</td>
+  <td class='TestResult PASS'>PASS</td>
+</tr>
+
+
+    <tr>
+      <td class='TestName'>TOTALS</td>
+      <td class='ScriptErrors'>0</td>
+      <td class='ChecksFailed'>0</td>
+      <td class='ChecksPassed'>47</td>
+      <td class='ChecksWarmed'>0</td>
+      <td class='CallSequenceFailures'>0</td>
+      <td class='TestResult PASS'>PASS</td>
+    </tr>
+  </table>
+</div>
+
+  </body>
+</html>

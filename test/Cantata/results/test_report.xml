@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
+<?xml-stylesheet href="file:/C:/qa_system/cantata/configuration/org.eclipse.osgi/8/0/.cp/xslt/HTML%20Detailed%20Report.xslt" type="text/xsl"?><testReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="11th February 2022 15:47" xsi:noNamespaceSchemaLocation="test_report.xsd">
+  <project name="test">
+    <testScriptInfo>
+      <summary status="passed">
+        <testScripts>1</testScripts>
+        <testScriptsPass>1</testScriptsPass>
+        <testScriptsFail>0</testScriptsFail>
+        <testCases>9</testCases>
+        <testCasesPassed>9</testCasesPassed>
+        <testCasesFailed>0</testCasesFailed>
+        <checksPassed>47</checksPassed>
+        <checksFailed>0</checksFailed>
+        <checksWarning>0</checksWarning>
+        <scriptDirectives>36</scriptDirectives>
+        <scriptErrors>0</scriptErrors>
+        <callSequenceFailures>0</callSequenceFailures>
+        <userComments>0</userComments>
+      </summary>
+    </testScriptInfo>
+    <filterInfo>Filters Applied: None</filterInfo>
+    <coverageInfo>
+      <coverageAchieved>
+        <entryPoint>NO DATA</entryPoint>
+        <statement>NO DATA</statement>
+        <decision>NO DATA</decision>
+        <callReturn>NO DATA</callReturn>
+        <booleanOperandEffectivenessMasking>NO DATA</booleanOperandEffectivenessMasking>
+        <booleanOperandEffectivenessUnique>NO DATA</booleanOperandEffectivenessUnique>
+      </coverageAchieved>
+    </coverageInfo>
+    <coverageTargets>
+      <entryPoint enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </entryPoint>
+      <statement enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </statement>
+      <decision enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </decision>
+      <callReturn enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </callReturn>
+      <booleanOperandEffectivenessMasking enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </booleanOperandEffectivenessMasking>
+      <booleanOperandEffectivenessUnique enabled="true">
+        <targetInfo>
+          <targetPercent>100</targetPercent>
+          <functionsPassed>0</functionsPassed>
+          <totalFunctions>0</totalFunctions>
+          <uninstrumentedFunctions>926</uninstrumentedFunctions>
+        </targetInfo>
+      </booleanOperandEffectivenessUnique>
+    </coverageTargets>
+  </project>
+  <testResults>
+    <testScript>
+      <info>
+        <testScriptName>stack</testScriptName>
+        <testScriptDescription>= Cantata Test Harness v9.5                                               =
+= (c) 2021 QA Systems GmbH                                                =
+=    Configuration: x86-Win32-gpp4.9.2                                    =
+=     Test Started: Fri Feb 11 15:47:38 2022                              =</testScriptDescription>
+        <testScriptFile name="atest_stack.cpp" path="atest_stack/"/>
+      </info>
+      <summary status="passed">
+        <testCases>9</testCases>
+        <testCasesPassed>9</testCasesPassed>
+        <testCasesFailed>0</testCasesFailed>
+        <checksPassed>47</checksPassed>
+        <checksFailed>0</checksFailed>
+        <checksWarning>0</checksWarning>
+        <scriptDirectives>36</scriptDirectives>
+        <scriptErrors>0</scriptErrors>
+        <scriptWarnings>0</scriptWarnings>
+        <callSequenceFailures>0</callSequenceFailures>
+        <userComments>0</userComments>
+      </summary>
+      <testScriptBody>
+        <testCase description="default case" title="1: Stack">
+          <summary status="passed">
+            <checksPassed>5</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>3</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>174</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>187</lineNumber>
+              </position>
+              <name>returnValue-&gt;head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>190</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>192</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="default case" title="2: Stack(const Stack &amp;)">
+          <summary status="passed">
+            <checksPassed>6</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>3</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>202</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>217</lineNumber>
+              </position>
+              <name>returnValue-&gt;head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>218</lineNumber>
+              </position>
+              <name>stack.head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>221</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>223</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="created to solve true case of stack_ptr != NULL at line number 31" title="3: Stack(const Stack &amp;)">
+          <summary status="passed">
+            <checksPassed>7</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>5</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>233</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>444</lineNumber>
+              </position>
+              <name>Function: Stack::push(int)</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>444</lineNumber>
+              </position>
+              <name>Instance: 1</name>
+              <description/>
+            </callSequenceScriptDir>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>447</lineNumber>
+              </position>
+              <name>value = 0</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>250</lineNumber>
+              </position>
+              <name>returnValue-&gt;head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>251</lineNumber>
+              </position>
+              <name>stack.head = &amp;map_stack_head[0]</name>
+              <expectedValue>0x442044</expectedValue>
+              <actualValue>0x442044</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>254</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>256</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="default case" title="4: is_empty">
+          <summary status="passed">
+            <checksPassed>6</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>3</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>266</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>285</lineNumber>
+              </position>
+              <name>testObj-&gt;head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>286</lineNumber>
+              </position>
+              <name>returnValue = true</name>
+              <expectedValue>1</expectedValue>
+              <actualValue>1</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>289</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>291</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="default case" title="5: push(int)">
+          <summary status="passed">
+            <checksPassed>6</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>5</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>301</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>477</lineNumber>
+              </position>
+              <name>Function: operator_new(std::size_t)</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>477</lineNumber>
+              </position>
+              <name>Instance: 1</name>
+              <description/>
+            </callSequenceScriptDir>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>480</lineNumber>
+              </position>
+              <name>cppsm_size = 8U</name>
+              <expectedValue>8</expectedValue>
+              <actualValue>8</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>322</lineNumber>
+              </position>
+              <name>testObj-&gt;head = &amp;map_operator_new_call1[0]</name>
+              <expectedValue>0x44204c</expectedValue>
+              <actualValue>0x44204c</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>325</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>327</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="created to solve catch handler at line number 73" title="6: push(int)">
+          <summary status="passed">
+            <checksPassed>2</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>5</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>337</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>477</lineNumber>
+              </position>
+              <name>Function: operator_new(std::size_t)</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>477</lineNumber>
+              </position>
+              <name>Instance: 2</name>
+              <description/>
+            </callSequenceScriptDir>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>484</lineNumber>
+              </position>
+              <name>cppsm_size = 8U</name>
+              <expectedValue>8</expectedValue>
+              <actualValue>8</actualValue>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>359</lineNumber>
+              </position>
+              <name>Expected Exception: </name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>361</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="default case" title="7: pop">
+          <summary status="passed">
+            <checksPassed>9</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>7</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>371</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>519</lineNumber>
+              </position>
+              <name>Function: Stack::is_empty()</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>519</lineNumber>
+              </position>
+              <name>Instance: 1</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>559</lineNumber>
+              </position>
+              <name>Function: operator_delete(void *)</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>559</lineNumber>
+              </position>
+              <name>Instance: 1</name>
+              <description/>
+            </callSequenceScriptDir>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>562</lineNumber>
+              </position>
+              <name>param_1 = &amp;map_testObj_head[0].data</name>
+              <expectedValue>0x442054</expectedValue>
+              <actualValue>0x442054</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>563</lineNumber>
+              </position>
+              <name>(*((Stack::node*) param_1)).data = 0</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>564</lineNumber>
+              </position>
+              <name>(*((Stack::node*) param_1)).next = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>394</lineNumber>
+              </position>
+              <name>testObj-&gt;head = NULL</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>395</lineNumber>
+              </position>
+              <name>returnValue = 0</name>
+              <expectedValue>0</expectedValue>
+              <actualValue>0</actualValue>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>59</lineNumber>
+              </position>
+              <name>map_stack_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>60</lineNumber>
+              </position>
+              <name>map_operator_new_call1</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <check status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>61</lineNumber>
+              </position>
+              <name>map_testObj_head</name>
+              <expectedValue/>
+              <actualValue/>
+            </check>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>398</lineNumber>
+              </position>
+              <name>No Exceptions</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>400</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="created to solve true case of is_empty() at line number 84" title="8: pop">
+          <summary status="passed">
+            <checksPassed>1</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>5</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <scriptDirective>
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>410</lineNumber>
+              </position>
+              <name>Start Call Sequence Validation</name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>519</lineNumber>
+              </position>
+              <name>Function: Stack::is_empty()</name>
+              <description/>
+            </callSequenceScriptDir>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>519</lineNumber>
+              </position>
+              <name>Instance: 2</name>
+              <description/>
+            </callSequenceScriptDir>
+            <scriptDirective status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>430</lineNumber>
+              </position>
+              <name>Expected Exception: </name>
+              <description/>
+            </scriptDirective>
+            <callSequenceScriptDir status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>432</lineNumber>
+              </position>
+              <name>End Call Sequence Validation </name>
+              <description/>
+            </callSequenceScriptDir>
+          </contents>
+        </testCase>
+        <testCase description="100% Entry Point + Statement + Call Return + Decision + MC/DC Coverage" title="COVERAGE RULE SET">
+          <summary status="passed">
+            <checksPassed>5</checksPassed>
+            <checksFailed>0</checksFailed>
+            <checksWarning>0</checksWarning>
+            <scriptDirectives>0</scriptDirectives>
+            <scriptErrors>0</scriptErrors>
+            <scriptWarnings>0</scriptWarnings>
+            <callSequenceFailures>0</callSequenceFailures>
+            <userComments>0</userComments>
+          </summary>
+          <contents>
+            <checkRange status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>99</lineNumber>
+              </position>
+              <name>100% Entry Point Coverage</name>
+              <lowerValue>100</lowerValue>
+              <upperValue>100</upperValue>
+              <actualValue>100</actualValue>
+            </checkRange>
+            <checkRange status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>103</lineNumber>
+              </position>
+              <name>100% Statement Coverage</name>
+              <lowerValue>100</lowerValue>
+              <upperValue>100</upperValue>
+              <actualValue>100</actualValue>
+            </checkRange>
+            <checkRange status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>107</lineNumber>
+              </position>
+              <name>100% Call Return Coverage</name>
+              <lowerValue>100</lowerValue>
+              <upperValue>100</upperValue>
+              <actualValue>100</actualValue>
+            </checkRange>
+            <checkRange status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>111</lineNumber>
+              </position>
+              <name>100% Decision Coverage</name>
+              <lowerValue>100</lowerValue>
+              <upperValue>100</upperValue>
+              <actualValue>100</actualValue>
+            </checkRange>
+            <checkRange status="passed">
+              <position>
+                <sourceFile name="atest_stack.cpp" path="atest_stack/"/>
+                <lineNumber>115</lineNumber>
+              </position>
+              <name>100% Boolean Operand Effectiveness Coverage</name>
+              <lowerValue>100</lowerValue>
+              <upperValue>100</upperValue>
+              <actualValue>100</actualValue>
+            </checkRange>
+          </contents>
+        </testCase>
+      </testScriptBody>
+    </testScript>
+  </testResults>
+  <coverageReport/>
+</testReport>

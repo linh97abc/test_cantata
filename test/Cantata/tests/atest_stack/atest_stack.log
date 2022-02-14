@@ -1,0 +1,48 @@
+Compiling (C++)... ../../stack.cpp -> atest_stack/stack.o
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ../../stack.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+C:/Strawberry/c/lib/gcc/../../i686-w64-mingw32/include/c++/new:158: warning: I0700 - Code inserted between pragma and associated declaration (line 1302 in modified source)
+Compiling with "g++"
+Linking (C++) atest_stack/atest_stack.exe ...
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Cantata CPPTI  v9.5 (c) 2021 QA Systems GmbH
+Linking with "g++"
+Built atest_stack successfully
+Running atest_stack ...
+===========================================================================
+= Cantata Test Harness v9.5                                               =
+= (c) 2021 QA Systems GmbH                                                =
+=-------------------------------------------------------------------------=
+= Test Description: stack                                                 =
+=         Log File: atest_stack.ctr                                       =
+=    Configuration: x86-Win32-gpp4.9.2                                    =
+=     Test Started: Fri Feb 11 15:47:38 2022                              =
+===========================================================================
+================================================================================
+= Test Finished: Fri Feb 11 15:47:38 2022                                      =
+=------------------------------------------------------------------------------=
+= Test                      Script  Checks  Checks  Checks  Call Seq     TEST  =
+= Case                      Errors  Failed  Passed  Warned  Failures    RESULT =
+=------------------------------------------------------------------------------=
+= 1: Stack                       0       0       5       0         0      PASS =
+= 2: Stack(const Stack &)        0       0       6       0         0      PASS =
+= 3: Stack(const Stack &)        0       0       7       0         0      PASS =
+= 4: is_empty                    0       0       6       0         0      PASS =
+= 5: push(int)                   0       0       6       0         0      PASS =
+= 6: push(int)                   0       0       2       0         0      PASS =
+= 7: pop                         0       0       9       0         0      PASS =
+= 8: pop                         0       0       1       0         0      PASS =
+= COVERAGE RULE SET              0       0       5       0         0      PASS =
+= Other                          0       0       0       0         0      PASS =
+=------------------------------------------------------------------------------=
+= TOTALS                         0       0      47       0         0      PASS =
+================================================================================
+Test complete
+Generating dependencies file for atest_stack ...
+ done
+Cantata CPPCTR2HTML v9.5 (c) 2021 QA Systems GmbH

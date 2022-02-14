@@ -1,0 +1,21 @@
+#
+# Cantata Test-Level Options
+#
+# Any options set in this file will override the options set in the
+# project-level options file.
+#
+# WARNING: Do not alter this file manually.
+#
+#tool.testid=07654650-ed52-4062-8581-52b774aeac8e
+"--ci:--instr:stmt;func;call;decn;log;"
+"--dr"
+"--dr_list_definitions:%s_dr.log"
+"--dr_max_link_iterations:10"
+"--sm:--friend:Stack#TEST_CLASS(stack)"
+"--sm:--friend:Stack#TEST_CLASS(friend)"
+"--sm:--wrap:Stack::is_empty()#Stack::pop()"
+"--sm:--wrap:Stack::push(int )#Stack::Stack(const Stack &)"
+"--sm:--wrap:operator delete(void *)#Stack::pop()"
+"--sm:--wrap:operator new(std::size_t)#Stack::push(int )"
+
+#User Section

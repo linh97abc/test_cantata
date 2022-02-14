@@ -1,0 +1,22 @@
+#
+# Cantata Test-Level Options
+#
+# Any options set in this file will override the options set in the
+# project-level options file.
+#
+# WARNING: Do not alter this file manually.
+#
+#tool.testid=80b0dd4b-8863-454e-ad4f-b09b847b77a7
+"--ci:--instr:call;"
+"--dr"
+"--dr_list_definitions:%s_dr.log"
+"--dr_max_link_iterations:10"
+"--sm:--friend:coverage#TEST_CLASS(cov)"
+"--sm:--friend:cov1#TEST_CLASS(cov)"
+"--sm:--friend:cov2#TEST_CLASS(cov)"
+"--sm:--friend:cov3#TEST_CLASS(cov)"
+
+#User Section
+--sm:--suppress_instantiation:*
+--sm:--suppress_instantiation:*::*
+--sm:--suppress_instantiation:*::*::*

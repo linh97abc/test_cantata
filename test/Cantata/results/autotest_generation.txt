@@ -1,0 +1,22 @@
+===========================================================================
+= Cantata AutoTest Generation Report                                      =
+= (c) 2019 QA Systems GmbH                                                =
+=-------------------------------------------------------------------------=
+= Generation Date: Feb 11, 2022 3:45 PM                                   =
+===========================================================================
+4 functions fully tested.
+Files fully tested:
+  - NONE
+
+Files not fully tested:
+- stack.cpp (2.9 seconds)
+  - Stack::Stack(const Stack &)
+    - Full coverage not obtained
+
+  - Stack::pop()
+    - CHECK removed because no return statement was found.
+
+  - 4 functions fully tested (1 with warnings).
+
+Files not tested:
+  - NONE

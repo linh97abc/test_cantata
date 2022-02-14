@@ -1,0 +1,572 @@
+===========================================================================
+= Cantata Test Harness v9.5                                               =
+= (c) 2021 QA Systems GmbH                                                =
+=-------------------------------------------------------------------------=
+= Test Description: stack                                                 =
+=    Configuration: x86-Win32-gpp4.9.2                                    =
+=     Test Started: Fri Feb 11 15:47:38 2022                              =
+===========================================================================
+------------------------- Start Test: 1: Stack
+
+default case
+
+    Start Call Sequence Validation:
+
+        Start Exception Block:
+        PASSED: Check: returnValue->head = NULL
+                value: 0
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: 1: Stack
+
+------------------------- Start Test: 2: Stack(const Stack &)
+
+default case
+
+    Start Call Sequence Validation:
+
+        Start Exception Block:
+        PASSED: Check: returnValue->head = NULL
+                value: 0
+        PASSED: Check: stack.head = NULL
+                value: 0
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: 2: Stack(const Stack &)
+
+------------------------- Start Test: 3: Stack(const Stack &)
+
+created to solve true case of stack_ptr != NULL at line number 31
+
+    Start Call Sequence Validation:
+    Expected calls: Stack::push(int)#1
+
+        Start Exception Block:
+
+        PASSED: Function: Stack::push(int)
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Stack::push(int)#1
+        PASSED: Check: value = 0
+                value: 0
+        PASSED: Check: returnValue->head = NULL
+                value: 0
+        PASSED: Check: stack.head = &map_stack_head[0]
+                value: 0x442044
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    Stack::push(int)#1
+
+------------------------- End Test: 3: Stack(const Stack &)
+
+------------------------- Start Test: 4: is_empty
+
+default case
+
+    Start Call Sequence Validation:
+
+        Start Exception Block:
+        PASSED: Check: testObj->head = NULL
+                value: 0
+        PASSED: Check: returnValue = true
+                value: 1
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+
+
+------------------------- End Test: 4: is_empty
+
+------------------------- Start Test: 5: push(int)
+
+default case
+
+    Start Call Sequence Validation:
+    Expected calls: operator_new(std::size_t)#1
+
+        Start Exception Block:
+
+        PASSED: Function: operator_new(std::size_t)
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        operator_new(std::size_t)#1
+        PASSED: Check: cppsm_size = 8U
+                value: 8
+        PASSED: Check: testObj->head = &map_operator_new_call1[0]
+                value: 0x44204c
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    operator_new(std::size_t)#1
+
+------------------------- End Test: 5: push(int)
+
+------------------------- Start Test: 6: push(int)
+
+created to solve catch handler at line number 73
+
+    Start Call Sequence Validation:
+    Expected calls: operator_new(std::size_t)#2
+
+        Start Exception Block:
+
+        PASSED: Function: operator_new(std::size_t)
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        operator_new(std::size_t)#2
+        PASSED: Check: cppsm_size = 8U
+                value: 8
+
+        PASSED: Expected Exception: Stack::new_error thrownValue
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    operator_new(std::size_t)#2
+
+------------------------- End Test: 6: push(int)
+
+------------------------- Start Test: 7: pop
+
+default case
+
+    Start Call Sequence Validation:
+    Expected calls: Stack::is_empty()#1;operator_delete(void *)#1
+
+        Start Exception Block:
+
+        PASSED: Function: Stack::is_empty()
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Stack::is_empty()#1
+
+        PASSED: Function: operator_delete(void *)
+        PASSED: Instance: 1
+        Call sequence matched so far: 
+        Stack::is_empty()#1;operator_delete(void *)#1
+        PASSED: Check: param_1 = &map_testObj_head[0].data
+                value: 0x442054
+        PASSED: Check: (*((Stack::node*) param_1)).data = 0
+                value: 0
+        PASSED: Check: (*((Stack::node*) param_1)).next = NULL
+                value: 0
+        PASSED: Check: testObj->head = NULL
+                value: 0
+        PASSED: Check: returnValue = 0
+                value: 0
+        PASSED: Check Memory: map_stack_head
+        PASSED: Check Memory: map_operator_new_call1
+        PASSED: Check Memory: map_testObj_head
+
+        PASSED: No Exceptions
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    Stack::is_empty()#1;operator_delete(void *)#1
+
+------------------------- End Test: 7: pop
+
+------------------------- Start Test: 8: pop
+
+created to solve true case of is_empty() at line number 84
+
+    Start Call Sequence Validation:
+    Expected calls: Stack::is_empty()#2
+
+        Start Exception Block:
+
+        PASSED: Function: Stack::is_empty()
+        PASSED: Instance: 2
+        Call sequence matched so far: 
+        Stack::is_empty()#2
+
+        PASSED: Expected Exception: Stack::empty_pop thrownValue
+
+        End Exception Block
+
+    End Call Sequence Validation:
+
+    Call sequence matched: 
+    Stack::is_empty()#2
+
+------------------------- End Test: 8: pop
+
+------------------------- Start Test: COVERAGE RULE SET
+
+100% Entry Point + Statement + Call Return + Decision + MC/DC Coverage
+GET_COVERAGE_MIN: entry point coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Entry Point Coverage
+               actual: 100
+                lower: 100
+                upper: 100
+GET_COVERAGE_MIN: statement coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Statement Coverage
+               actual: 100
+                lower: 100
+                upper: 100
+GET_COVERAGE_MIN: call-return coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Call Return Coverage
+               actual: 100
+                lower: 100
+                upper: 100
+GET_COVERAGE_MIN: decision coverage (feasible only, including catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Decision Coverage
+               actual: 100
+                lower: 100
+                upper: 100
+GET_COVERAGE_MIN: boolean operand effectiveness (feasible only, including 
+catch-clauses)
+                  for "*" in context "*" = 100.0%
+
+    PASSED: Check Range: 100% Boolean Operand Effectiveness Coverage
+               actual: 100
+                lower: 100
+                upper: 100
+-----------------------------------------------------------------------------
+Coverage results for  entry point, call-return, statement, decision, boolean 
+operand effectiveness, 
+                 for "*" in context "*"
+                 with executed and un-executed details
+                 feasible only, including catch-clauses
+-----------------------------------------------------------------------------
+stack.cpp(18):Stack::Stack()
+entry point coverage details (with executed and un-executed cases)
+
+stack.cpp(18):              entry   1                                       8
+
+"Stack::Stack"                                           executed           1
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                               entry point coverage      100.0%
+
+stack.cpp(26):Stack::Stack(const Stack &)
+entry point coverage details (with executed and un-executed cases)
+
+stack.cpp(26):              entry   1                                       2
+
+"Stack::Stack"                                           executed           1
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                               entry point coverage      100.0%
+
+stack.cpp(51):Stack::is_empty()
+entry point coverage details (with executed and un-executed cases)
+
+stack.cpp(51):              entry   1                                       1
+
+"Stack::is_empty"                                        executed           1
+"Stack::is_empty"                                     un-executed           0
+"Stack::is_empty"                            entry point coverage      100.0%
+
+stack.cpp(82):Stack::pop()
+entry point coverage details (with executed and un-executed cases)
+
+stack.cpp(82):              entry   1                                       2
+
+"Stack::pop"                                             executed           1
+"Stack::pop"                                          un-executed           0
+"Stack::pop"                                 entry point coverage      100.0%
+
+stack.cpp(59):Stack::push(int )
+entry point coverage details (with executed and un-executed cases)
+
+stack.cpp(59):              entry   1                                       2
+
+"Stack::push"                                            executed           1
+"Stack::push"                                         un-executed           0
+"Stack::push"                                entry point coverage      100.0%
+
+stack.cpp(18):Stack::Stack()
+call-return coverage details (with executed and un-executed cases)
+
+
+"Stack::Stack"                                           executed           0
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                               call-return coverage      100.0%
+
+stack.cpp(26):Stack::Stack(const Stack &)
+call-return coverage details (with executed and un-executed cases)
+
+stack.cpp(33):               call   1 (m-func)                              1
+
+"Stack::Stack"                                           executed           1
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                               call-return coverage      100.0%
+
+stack.cpp(51):Stack::is_empty()
+call-return coverage details (with executed and un-executed cases)
+
+
+"Stack::is_empty"                                        executed           0
+"Stack::is_empty"                                     un-executed           0
+"Stack::is_empty"                            call-return coverage      100.0%
+
+stack.cpp(82):Stack::pop()
+call-return coverage details (with executed and un-executed cases)
+
+stack.cpp(84):               call   1 (m-func)                              2
+stack.cpp(91):               call   2 (global-op)                           1
+
+"Stack::pop"                                             executed           2
+"Stack::pop"                                          un-executed           0
+"Stack::pop"                                 call-return coverage      100.0%
+
+stack.cpp(59):Stack::push(int )
+call-return coverage details (with executed and un-executed cases)
+
+stack.cpp(65):               call   1 (global-op)                           1
+
+"Stack::push"                                            executed           1
+"Stack::push"                                         un-executed           0
+"Stack::push"                                call-return coverage      100.0%
+
+stack.cpp(18):Stack::Stack()
+statement coverage details (with executed and un-executed cases)
+
+stack.cpp(20):              stmnt   1 (other)                               8
+
+"Stack::Stack"                                           executed           1
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                                 statement coverage      100.0%
+
+stack.cpp(26):Stack::Stack(const Stack &)
+statement coverage details (with executed and un-executed cases)
+
+stack.cpp(28):              stmnt   1 (other)                               2
+stack.cpp(30):              stmnt   2 (declaration)                         2
+stack.cpp(31):              stmnt   3 (loop)                                2
+stack.cpp(33):              stmnt   4 (other)                               1
+stack.cpp(34):              stmnt   5 (other)                               1
+stack.cpp(37):              stmnt   6 (other)                               2
+stack.cpp(39):              stmnt   7 (declaration)                         2
+stack.cpp(40):              stmnt   8 (loop)                                2
+stack.cpp(42):              stmnt   9 (other)                               1
+stack.cpp(43):              stmnt  10 (other)                               1
+stack.cpp(44):              stmnt  11 (other)                               1
+
+"Stack::Stack"                                           executed          11
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                                 statement coverage      100.0%
+
+stack.cpp(51):Stack::is_empty()
+statement coverage details (with executed and un-executed cases)
+
+stack.cpp(53):              stmnt   1 (return)                              1
+
+"Stack::is_empty"                                        executed           1
+"Stack::is_empty"                                     un-executed           0
+"Stack::is_empty"                              statement coverage      100.0%
+
+stack.cpp(82):Stack::pop()
+statement coverage details (with executed and un-executed cases)
+
+stack.cpp(84):              stmnt   1 (cond)                                2
+stack.cpp(86):              stmnt   2 (other)                               1
+stack.cpp(89):              stmnt   3 (declaration)                         1
+stack.cpp(90):              stmnt   4 (declaration)                         1
+stack.cpp(91):              stmnt   5 (other)                               1
+stack.cpp(92):              stmnt   6 (other)                               1
+stack.cpp(94):              stmnt   7 (return)                              1
+
+"Stack::pop"                                             executed           7
+"Stack::pop"                                          un-executed           0
+"Stack::pop"                                   statement coverage      100.0%
+
+stack.cpp(59):Stack::push(int )
+statement coverage details (with executed and un-executed cases)
+
+stack.cpp(61):              stmnt   1 (declaration)                         2
+stack.cpp(63):              stmnt   2 (other)                               2
+stack.cpp(65):              stmnt   3 (other)                               2
+stack.cpp(67):              stmnt   4 (other)                               1
+stack.cpp(68):              stmnt   5 (other)                               1
+stack.cpp(69):              stmnt   6 (other)                               1
+stack.cpp(73):              stmnt   7 (other)                               1
+stack.cpp(76):              stmnt   8 (return)                              1
+
+"Stack::push"                                            executed           8
+"Stack::push"                                         un-executed           0
+"Stack::push"                                  statement coverage      100.0%
+
+stack.cpp(18):Stack::Stack()
+decision coverage details (with executed and un-executed cases)
+
+
+"Stack::Stack"                                           executed           0
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                                  decision coverage      100.0%
+
+stack.cpp(26):Stack::Stack(const Stack &)
+decision coverage details (with executed and un-executed cases)
+
+stack.cpp(31):               decn   1 (while)  branch TRUE                  1
+stack.cpp(31):               decn   1 (while)  branch FALSE                 2
+stack.cpp(40):               decn   2 (while)  branch TRUE                  1
+stack.cpp(40):               decn   2 (while)  branch FALSE                 2
+
+"Stack::Stack"                                           executed           4
+"Stack::Stack"                                        un-executed           0
+"Stack::Stack"                                  decision coverage      100.0%
+
+stack.cpp(51):Stack::is_empty()
+decision coverage details (with executed and un-executed cases)
+
+
+"Stack::is_empty"                                        executed           0
+"Stack::is_empty"                                     un-executed           0
+"Stack::is_empty"                               decision coverage      100.0%
+
+stack.cpp(82):Stack::pop()
+decision coverage details (with executed and un-executed cases)
+
+stack.cpp(84):               decn   1 (if)     branch TRUE                  1
+stack.cpp(84):               decn   1 (if)     branch FALSE                 1
+
+"Stack::pop"                                             executed           2
+"Stack::pop"                                          un-executed           0
+"Stack::pop"                                    decision coverage      100.0%
+
+stack.cpp(59):Stack::push(int )
+decision coverage details (with executed and un-executed cases)
+
+
+"Stack::push"                                            executed           0
+"Stack::push"                                         un-executed           0
+"Stack::push"                                   decision coverage      100.0%
+
+stack.cpp(18):Stack::Stack()
+boolean operand effectiveness coverage details (with executed and un-executed 
+cases)
+
+
+"Stack::Stack"                                          effective           0
+"Stack::Stack"                                      not effective           0
+"Stack::Stack"                              boolean eff. coverage      100.0%
+
+stack.cpp(26):Stack::Stack(const Stack &)
+boolean operand effectiveness coverage details (with executed and un-executed 
+cases)
+
+
+"Stack::Stack"                                          effective           0
+"Stack::Stack"                                      not effective           0
+"Stack::Stack"                              boolean eff. coverage      100.0%
+
+stack.cpp(51):Stack::is_empty()
+boolean operand effectiveness coverage details (with executed and un-executed 
+cases)
+
+
+"Stack::is_empty"                                       effective           0
+"Stack::is_empty"                                   not effective           0
+"Stack::is_empty"                           boolean eff. coverage      100.0%
+
+stack.cpp(82):Stack::pop()
+boolean operand effectiveness coverage details (with executed and un-executed 
+cases)
+
+
+"Stack::pop"                                            effective           0
+"Stack::pop"                                        not effective           0
+"Stack::pop"                                boolean eff. coverage      100.0%
+
+stack.cpp(59):Stack::push(int )
+boolean operand effectiveness coverage details (with executed and un-executed 
+cases)
+
+
+"Stack::push"                                           effective           0
+"Stack::push"                                       not effective           0
+"Stack::push"                               boolean eff. coverage      100.0%
+
+Summary by     EXECUTED     Overall                Statistics
+Coverage type  INFEASIBLES  (wavg)     avg /    min /    max /    dev /   num
+-----------------------------------------------------------------------------
+entry point            0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /     5
+call-return            0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /     5
+statement              0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /     5
+decision               0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /     5
+boolean eff.           0   100.0%   100.0% / 100.0% / 100.0% /   0.0% /     5
+-----------------------------------------------------------------------------
+
+
+------------------------- End Test: COVERAGE RULE SET
+
+EXPORT_COVERAGE: coverage data written to "atest_stack.cov"
+================================================================================
+= Test Finished: Fri Feb 11 15:47:38 2022                                      =
+=------------------------------------------------------------------------------=
+= Test                      Script  Checks  Checks  Checks  Call Seq     TEST  =
+= Case                      Errors  Failed  Passed  Warned  Failures    RESULT =
+=------------------------------------------------------------------------------=
+= 1: Stack                       0       0       5       0         0      PASS =
+= 2: Stack(const Stack &)        0       0       6       0         0      PASS =
+= 3: Stack(const Stack &)        0       0       7       0         0      PASS =
+= 4: is_empty                    0       0       6       0         0      PASS =
+= 5: push(int)                   0       0       6       0         0      PASS =
+= 6: push(int)                   0       0       2       0         0      PASS =
+= 7: pop                         0       0       9       0         0      PASS =
+= 8: pop                         0       0       1       0         0      PASS =
+= COVERAGE RULE SET              0       0       5       0         0      PASS =
+= Other                          0       0       0       0         0      PASS =
+=------------------------------------------------------------------------------=
+= TOTALS                         0       0      47       0         0      PASS =
+================================================================================

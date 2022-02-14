@@ -1,0 +1,675 @@
+*** Batch command line: -b --report-file C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/qa-misra/results/real_code_report.txt -s localhost:1462 --xml-report-file C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/qa-misra/results/real_code_report.xml --xml-result-file C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/qa-misra/results/real_code_result.xml --drop C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/qa-misra/real_code.dax
+***
+*** Frontend for C / C++
+*** Version: 21.10
+*** Build: 9804194
+*** Tag: auto/2021/10/25/1917
+*** Host: PMN-GNC
+*** Preprocessing started on 2022/02/11 at 17:33:50
+***
+/* ABI */
+Using predefined ABI Analyzer default
+/* Active rule checks */
+Eclipse:
+  Files:
+    <all files>
+  Rules:
+    A.5.1 (full: invalid-directive)
+    A.6.2 (full: clang-warning)
+/* Preprocessing */
+Frontend configuration (Cantata/tests/atest_cov/atest_cov.cpp C++):
+  cxx-version: c++14 (ISO C++ 2014 with amendments)
+  keep-comments: no
+  Preprocessing uses predefines: no
+  Include paths:
+    - 'C:/qa_system/cantata/inc'
+    - 'C:/qa_system/cantata/inc'
+    - 'C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++'
+    - 'C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32'
+    - 'C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/backward'
+    - 'C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include'
+    - 'C:/qa_system/cantata/MinGW/include'
+    - 'C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include-fixed'
+    - 'C:/MinGW/include'
+  Macro definitions:
+    - '__LDBL_DECIMAL_DIG__=21'
+    - '__INT64_MAX__=0x7fffffffffffffffLL'
+    - '__LDBL_HAS_QUIET_NAN__=1'
+    - '__STDC__=1'
+    - '__cpp_init_captures=201304'
+    - '__cpp_binary_literals=201304'
+    - '__GCC_HAVE_DWARF2_CFI_ASM=1'
+    - '__WINT_TYPE__=short unsigned int'
+    - '__ORDER_LITTLE_ENDIAN__=1234'
+    - '__DEC64_MAX_EXP__=385'
+    - '__cpp_rvalue_reference=200610'
+    - '__FLT_EVAL_METHOD_TS_18661_3__=2'
+    - '__INT_LEAST64_WIDTH__=64'
+    - '__UINT_LEAST32_TYPE__=unsigned int'
+    - '__GCC_ATOMIC_POINTER_LOCK_FREE=2'
+    - '__UINT_FAST64_TYPE__=long long unsigned int'
+    - '__FLT32_DENORM_MIN__=1.40129846432481707092372958328991613e-45F32'
+    - '__INT_LEAST32_WIDTH__=32'
+    - '__FLT32X_DIG__=15'
+    - '__INT_FAST64_WIDTH__=64'
+    - '__GCC_ATOMIC_TEST_AND_SET_TRUEVAL=1'
+    - '__FLT64X_DENORM_MIN__=3.64519953188247460252840593361941982e-4951F64x'
+    - '__FLT64_HAS_DENORM__=1'
+    - '__cpp_runtime_arrays=198712'
+    - '__FLT64X_MAX__=1.18973149535723176502126385303097021e+4932F64x'
+    - '__GXX_WEAK__=1'
+    - '__BYTE_ORDER__=__ORDER_LITTLE_ENDIAN__'
+    - '__UINT_LEAST32_MAX__=0xffffffffU'
+    - '__DECIMAL_DIG__=21'
+    - '__has_include_next(STR)=__has_include_next__(STR)'
+    - '__FLT32X_MIN_EXP__=(-1021)'
+    - '__i586__=1'
+    - '__PRAGMA_REDEFINE_EXTNAME=1'
+    - '__SIZEOF_SIZE_T__=4'
+    - '__ATOMIC_RELEASE=3'
+    - '__LDBL_MIN__=3.36210314311209350626267781732175260e-4932L'
+    - '__cpp_constexpr=201304'
+    - '__cpp_initializer_lists=200806'
+    - '__WINT_WIDTH__=16'
+    - '__pentium__=1'
+    - '__stdcall=__attribute__((__stdcall__))'
+    - '__FLT64X_DIG__=18'
+    - '__SCHAR_MAX__=0x7f'
+    - '__GXX_ABI_VERSION=1013'
+    - '__FLT32X_MAX__=1.79769313486231570814527423731704357e+308F32x'
+    - '__UINTMAX_C(c)=c ## ULL'
+    - '__GCC_IEC_559_COMPLEX=2'
+    - '__FLT64_MIN__=2.22507385850720138309023271733240406e-308F64'
+    - '__code_model_32__=1'
+    - '__UINT64_MAX__=0xffffffffffffffffULL'
+    - '__DEC128_MIN__=1E-6143DL'
+    - '__UINT16_C(c)=c'
+    - '__LDBL_MIN_10_EXP__=(-4931)'
+    - '__FLT32_MAX_EXP__=128'
+    - '__INT_FAST16_MAX__=0x7fff'
+    - '__thiscall=__attribute__((__thiscall__))'
+    - '__UINT_FAST8_MAX__=0xff'
+    - '__UINT_LEAST64_TYPE__=long long unsigned int'
+    - '__cpp_user_defined_literals=200809'
+    - '__INT32_C(c)=c'
+    - '__UINT32_MAX__=0xffffffffU'
+    - '__FLT128_MIN_10_EXP__=(-4931)'
+    - '__FLT_MIN_10_EXP__=(-37)'
+    - '__ATOMIC_HLE_RELEASE=131072'
+    - '__FLT64X_HAS_QUIET_NAN__=1'
+    - '__GCC_HAVE_SYNC_COMPARE_AND_SWAP_8=1'
+    - '__FLT128_HAS_INFINITY__=1'
+    - '__MSVCRT__=1'
+    - '__GCC_ATOMIC_LONG_LOCK_FREE=2'
+    - '__PTRDIFF_WIDTH__=32'
+    - '__cpp_ref_qualifiers=200710'
+    - '__FLT64_DECIMAL_DIG__=17'
+    - '__UINT8_C(c)=c'
+    - '__cpp_generic_lambdas=201304'
+    - '__BIGGEST_ALIGNMENT__=16'
+    - '__UINT_LEAST8_MAX__=0xff'
+    - '__FLT32_MAX_10_EXP__=38'
+    - '__UINT_FAST16_TYPE__=short unsigned int'
+    - '__UINT_FAST32_MAX__=0xffffffffU'
+    - '__cpp_hex_float=201603'
+    - '__FLT128_MAX_10_EXP__=4932'
+    - '__cpp_alias_templates=200704'
+    - '__GCC_HAVE_SYNC_COMPARE_AND_SWAP_4=1'
+    - '__GCC_HAVE_SYNC_COMPARE_AND_SWAP_2=1'
+    - '__GCC_HAVE_SYNC_COMPARE_AND_SWAP_1=1'
+    - '__MINGW32__=1'
+    - '__UINT_FAST8_TYPE__=unsigned char'
+    - '_stdcall=__attribute__((__stdcall__))'
+    - '__FLT128_HAS_QUIET_NAN__=1'
+    - '__SIZEOF_LONG__=4'
+    - '__UINT64_C(c)=c ## ULL'
+    - '__STDC_VERSION__=201710L'
+    - '__INT_FAST8_MAX__=0x7f'
+    - '__cpp_lambdas=200907'
+    - '__DEC64_EPSILON__=1E-15DD'
+    - '__UINTMAX_MAX__=0xffffffffffffffffULL'
+    - '__FLT64X_MAX_10_EXP__=4932'
+    - '__cpp_threadsafe_static_init=200806'
+    - '__DEC64_MIN__=1E-383DD'
+    - '__INT_FAST32_WIDTH__=32'
+    - '__FLT64X_HAS_INFINITY__=1'
+    - '__WINT_MIN__=0'
+    - 'WINNT=1'
+    - '__REGISTER_PREFIX__'
+    - '__FLT32X_HAS_DENORM__=1'
+    - '__INTMAX_C(c)=c ## LL'
+    - '__CHAR16_TYPE__=short unsigned int'
+    - '__INTMAX_WIDTH__=64'
+    - '__FLT_RADIX__=2'
+    - '__INTPTR_WIDTH__=32'
+    - '__cdecl=__attribute__((__cdecl__))'
+    - '__ORDER_BIG_ENDIAN__=4321'
+    - '__FLT128_DECIMAL_DIG__=36'
+    - '__SIZE_MAX__=0xffffffffU'
+    - '__FLT128_DENORM_MIN__=6.47517511943802511092443895822764655e-4966F128'
+    - '__DBL_EPSILON__=((double)2.22044604925031308084726333618164062e-16L)'
+    - '__FLT32_MIN_EXP__=(-125)'
+    - '__SIZE_TYPE__=unsigned int'
+    - '__cpp_unicode_characters=200704'
+    - '__cpp_variadic_templates=200704'
+    - '__FLT128_MIN_EXP__=(-16381)'
+    - '__FLT128_EPSILON__=1.92592994438723585305597794258492732e-34F128'
+    - '__SEG_GS=1'
+    - '__UINT32_TYPE__=unsigned int'
+    - '__FLOAT_WORD_ORDER__=__ORDER_LITTLE_ENDIAN__'
+    - '__LDBL_MAX_EXP__=16384'
+    - '__FLT64X_MANT_DIG__=64'
+    - '__UINT_LEAST8_TYPE__=unsigned char'
+    - '__cpp_static_assert=200410'
+    - '__FLT_MAX__=3.40282346638528859811704183484516925e+38F'
+    - '__DBL_DENORM_MIN__=((double)4.94065645841246544176568792868221372e-324L)'
+    - '__GNUG__=8'
+    - '__cpp_inheriting_constructors=201511'
+    - '__UINT_LEAST64_MAX__=0xffffffffffffffffULL'
+    - '__SIZEOF_SHORT__=2'
+    - '__DEC32_MIN_EXP__=(-94)'
+    - '__DECIMAL_BID_FORMAT__=1'
+    - '__STDC_UTF_16__=1'
+    - '__cpp_rvalue_references=200610'
+    - '__UINT8_TYPE__=unsigned char'
+    - '__FLT128_MIN__=3.36210314311209350626267781732175260e-4932F128'
+    - '__INT_FAST64_TYPE__=long long int'
+    - '__INT_LEAST8_MAX__=0x7f'
+    - '__LDBL_HAS_DENORM__=1'
+    - '__FLT64X_DECIMAL_DIG__=21'
+    - '__FLT64X_EPSILON__=1.08420217248550443400745280086994171e-19F64x'
+    - '__INTPTR_MAX__=0x7fffffff'
+    - '__INT_LEAST16_TYPE__=short int'
+    - '__cpp_variable_templates=201304'
+    - '__FLT64_MAX__=1.79769313486231570814527423731704357e+308F64'
+    - '__INT16_MAX__=0x7fff'
+    - '__INT8_MAX__=0x7f'
+    - '__INT_LEAST8_TYPE__=signed char'
+    - '__DEC32_MAX_EXP__=97'
+    - '__GCC_ATOMIC_BOOL_LOCK_FREE=2'
+    - '__INT_FAST32_MAX__=0x7fffffff'
+    - '__INT_LEAST32_MAX__=0x7fffffff'
+    - '__WCHAR_UNSIGNED__=1'
+    - '__DEC128_SUBNORMAL_MIN__=0.000000000000000000000000000000001E-6143DL'
+    - '__ATOMIC_CONSUME=1'
+    - '__LDBL_DENORM_MIN__=3.64519953188247460252840593361941982e-4951L'
+    - '__LDBL_DIG__=18'
+    - '__FLT32X_DENORM_MIN__=4.94065645841246544176568792868221372e-324F32x'
+    - '__SIG_ATOMIC_WIDTH__=32'
+    - '__i386=1'
+    - '_INTEGRAL_MAX_BITS=64'
+    - '__FLT32X_MAX_EXP__=1024'
+    - '__GNUC_PATCHLEVEL__=0'
+    - '__LDBL_MIN_EXP__=(-16381)'
+    - '__WINNT=1'
+    - '__DBL_HAS_DENORM__=1'
+    - '__DEC32_MANT_DIG__=7'
+    - '__UINT_FAST32_TYPE__=unsigned int'
+    - '__FLT128_DIG__=33'
+    - '__VERSION__="8.2.0"'
+    - '__SIZEOF_LONG_DOUBLE__=12'
+    - '__PTRDIFF_MAX__=0x7fffffff'
+    - '__STDC_UTF_32__=1'
+    - '__FLT32_HAS_DENORM__=1'
+    - '__FLT_EPSILON__=1.19209289550781250000000000000000000e-7F'
+    - '__GCC_ATOMIC_INT_LOCK_FREE=2'
+    - '__SHRT_WIDTH__=16'
+    - '__FLT128_HAS_DENORM__=1'
+    - '__GCC_ATOMIC_LLONG_LOCK_FREE=2'
+    - '__PTRDIFF_TYPE__=int'
+    - '__UINT16_TYPE__=short unsigned int'
+    - '__SIZE_WIDTH__=32'
+    - '__declspec(x)=__attribute__((x))'
+    - '__DBL_MIN__=((double)2.22507385850720138309023271733240406e-308L)'
+    - '__FLT128_MANT_DIG__=113'
+    - '__SIG_ATOMIC_TYPE__=int'
+    - '__cpp_delegating_constructors=200604'
+    - '__fastcall=__attribute__((__fastcall__))'
+    - '__cpp_decltype=200707'
+    - '__DEPRECATED=1'
+    - '__DEC32_MIN__=1E-95DF'
+    - '__FLT32_DECIMAL_DIG__=9'
+    - '__LONG_LONG_WIDTH__=64'
+    - '__LONG_WIDTH__=32'
+    - '__FLT_HAS_DENORM__=1'
+    - '__FLT32X_HAS_INFINITY__=1'
+    - '__FLT32X_MIN_10_EXP__=(-307)'
+    - '__WCHAR_MIN__=0'
+    - '__CHAR32_TYPE__=unsigned int'
+    - '__GXX_RTTI=1'
+    - '__FLT64X_MAX_EXP__=16384'
+    - '__FLT_DENORM_MIN__=1.40129846432481707092372958328991613e-45F'
+    - '__FLT128_MAX__=1.18973149535723176508575932662800702e+4932F128'
+    - '__DEC32_MAX__=9.999999E96DF'
+    - '__INT_LEAST64_TYPE__=long long int'
+    - '__FLT32_MAX__=3.40282346638528859811704183484516925e+38F32'
+    - '__FLT_HAS_QUIET_NAN__=1'
+    - '_WIN32=1'
+    - '__ATOMIC_HLE_ACQUIRE=65536'
+    - '__cpp_unicode_literals=200710'
+    - '__FLT32X_DECIMAL_DIG__=17'
+    - '__UINT8_MAX__=0xff'
+    - '__FLT32_HAS_INFINITY__=1'
+    - '__INT64_C(c)=c ## LL'
+    - '__SIZEOF_FLOAT80__=12'
+    - '__UINT32_C(c)=c ## U'
+    - '__SIZEOF_LONG_LONG__=8'
+    - '__GCC_IEC_559=2'
+    - '__INT_FAST8_WIDTH__=8'
+    - '__LONG_MAX__=0x7fffffffL'
+    - '__FLT_MIN_EXP__=(-125)'
+    - '__USER_LABEL_PREFIX__=_'
+    - '__FLT64_MAX_EXP__=1024'
+    - '__INT_FAST8_TYPE__=signed char'
+    - '__FLT64_MAX_10_EXP__=308'
+    - '__INT16_TYPE__=short int'
+    - '__FLT32X_HAS_QUIET_NAN__=1'
+    - '__cpp_rtti=199711'
+    - '_cdecl=__attribute__((__cdecl__))'
+    - '__INT8_C(c)=c'
+    - '__WINNT__=1'
+    - '__FLT_MIN__=1.17549435082228750796873653722224568e-38F'
+    - '__ATOMIC_ACQ_REL=4'
+    - '__INT_LEAST64_MAX__=0x7fffffffffffffffLL'
+    - '__DEC128_MAX_EXP__=6145'
+    - '__LDBL_HAS_INFINITY__=1'
+    - '__cpp_attributes=200809'
+    - '__FLT64_MANT_DIG__=53'
+    - '__i386__=1'
+    - '_fastcall=__attribute__((__fastcall__))'
+    - '__INT16_C(c)=c'
+    - '__cpp_aggregate_nsdmi=201304'
+    - '__GCC_ATOMIC_CHAR16_T_LOCK_FREE=2'
+    - '__DBL_DIG__=15'
+    - '__DEC_EVAL_METHOD__=2'
+    - '__WIN32=1'
+    - '__FLT32X_MIN__=2.22507385850720138309023271733240406e-308F32x'
+    - '__INT_LEAST16_MAX__=0x7fff'
+    - '__CHAR_BIT__=8'
+    - '__FLT64_MIN_EXP__=(-1021)'
+    - '__i586=1'
+    - '__ATOMIC_SEQ_CST=5'
+    - 'i386=1'
+    - '__FLT32_HAS_QUIET_NAN__=1'
+    - '__FLT_EVAL_METHOD__=2'
+    - '__FLT_MAX_10_EXP__=38'
+    - '__UINTPTR_MAX__=0xffffffffU'
+    - '__FLT64_EPSILON__=2.22044604925031308084726333618164062e-16F64'
+    - '__cpp_return_type_deduction=201304'
+    - '__SIZEOF_DOUBLE__=8'
+    - '__SIZEOF_WCHAR_T__=2'
+    - '__DEC32_SUBNORMAL_MIN__=0.000001E-95DF'
+    - '__DEC128_EPSILON__=1E-33DL'
+    - '__DBL_MAX_10_EXP__=308'
+    - '__INT_FAST32_TYPE__=int'
+    - '__cpp_decltype_auto=201304'
+    - '__NO_INLINE__=1'
+    - '__INT_WIDTH__=32'
+    - '__DBL_HAS_INFINITY__=1'
+    - '__LDBL_MANT_DIG__=64'
+    - '__UINT_FAST16_MAX__=0xffff'
+    - '__DBL_MIN_10_EXP__=(-307)'
+    - '__FLT64X_MIN_EXP__=(-16381)'
+    - '__GCC_ASM_FLAG_OUTPUTS__=1'
+    - '__INT64_TYPE__=long long int'
+    - '__GCC_ATOMIC_SHORT_LOCK_FREE=2'
+    - '__FLT64X_MIN_10_EXP__=(-4931)'
+    - '__ATOMIC_RELAXED=0'
+    - '__GNUC_MINOR__=2'
+    - '__FLT32_DIG__=6'
+    - '__SEG_FS=1'
+    - '__FINITE_MATH_ONLY__=0'
+    - '__GCC_ATOMIC_CHAR32_T_LOCK_FREE=2'
+    - '__FLT32_MIN_10_EXP__=(-37)'
+    - '__WIN32__=1'
+    - '__INT_LEAST32_TYPE__=int'
+    - '__DBL_DECIMAL_DIG__=17'
+    - '__DBL_MAX__=((double)1.79769313486231570814527423731704357e+308L)'
+    - '__FLT64_HAS_INFINITY__=1'
+    - '__DBL_MIN_EXP__=(-1021)'
+    - '__FLT32_MIN__=1.17549435082228750796873653722224568e-38F32'
+    - '__FLT_DIG__=6'
+    - '__UINT_LEAST16_TYPE__=short unsigned int'
+    - '__cpp_sized_deallocation=201309'
+    - '__INT_LEAST8_WIDTH__=8'
+    - '__SIZEOF_FLOAT128__=16'
+    - '__SIZEOF_PTRDIFF_T__=4'
+    - '__FLT32_EPSILON__=1.19209289550781250000000000000000000e-7F32'
+    - '__WCHAR_MAX__=0xffff'
+    - '__FLT_HAS_INFINITY__=1'
+    - '__INT_MAX__=0x7fffffff'
+    - '__LDBL_MAX_10_EXP__=4932'
+    - '__FLT32X_MAX_10_EXP__=308'
+    - '__SIZEOF_FLOAT__=4'
+    - '__INT_FAST16_WIDTH__=16'
+    - '__INT_FAST64_MAX__=0x7fffffffffffffffLL'
+    - '__DEC64_MIN_EXP__=(-382)'
+    - '__INT32_TYPE__=int'
+    - '__UINT_LEAST16_MAX__=0xffff'
+    - '__DEC128_MIN_EXP__=(-6142)'
+    - '__cpp_nsdmi=200809'
+    - '__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)'
+    - '__GNUC__=8'
+    - '__DEC64_MANT_DIG__=16'
+    - '__FLT64_MIN_10_EXP__=(-307)'
+    - '__GXX_MERGED_TYPEINFO_NAMES=0'
+    - '__DEC128_MAX__=9.999999999999999999999999999999999E6144DL'
+    - '__EXCEPTIONS=1'
+    - '__DBL_MANT_DIG__=53'
+    - '__DEC128_MANT_DIG__=34'
+    - '__SIG_ATOMIC_MAX__=0x7fffffff'
+    - '__cpp_raw_strings=200710'
+    - '__UINTMAX_TYPE__=long long unsigned int'
+    - '__INTPTR_TYPE__=int'
+    - '__ATOMIC_ACQUIRE=2'
+    - '__pentium=1'
+    - '_X86_=1'
+    - '__LDBL_EPSILON__=1.08420217248550443400745280086994171e-19L'
+    - '__LONG_LONG_MAX__=0x7fffffffffffffffLL'
+    - '__SCHAR_WIDTH__=8'
+    - '__cpp_range_based_for=200907'
+    - '__GCC_ATOMIC_CHAR_LOCK_FREE=2'
+    - '__GNUC_STDC_INLINE__=1'
+    - '__INT32_MAX__=0x7fffffff'
+    - '__FLT_MANT_DIG__=24'
+    - '__FLT128_MAX_EXP__=16384'
+    - '__UINT16_MAX__=0xffff'
+    - '__GXX_TYPEINFO_EQUALITY_INLINE=0'
+    - '__INTMAX_TYPE__=long long int'
+    - '__FLT64_DENORM_MIN__=4.94065645841246544176568792868221372e-324F64'
+    - '__has_include(STR)=__has_include__(STR)'
+    - '__FLT32X_MANT_DIG__=53'
+    - '__INT8_TYPE__=signed char'
+    - '__FLT_DECIMAL_DIG__=9'
+    - '__cplusplus=201402L'
+    - '__DEC64_MAX__=9.999999999999999E384DD'
+    - '__FLT_MAX_EXP__=128'
+    - '__SIZEOF_INT__=4'
+    - '__INTMAX_MAX__=0x7fffffffffffffffLL'
+    - '__SHRT_MAX__=0x7fff'
+    - '__LDBL_MAX__=1.18973149535723176502126385303097021e+4932L'
+    - '__DBL_MAX_EXP__=1024'
+    - '__DEC32_EPSILON__=1E-6DF'
+    - '__UINT_FAST64_MAX__=0xffffffffffffffffULL'
+    - '__STDC_HOSTED__=1'
+    - '__cpp_exceptions=199711'
+    - '__DBL_HAS_QUIET_NAN__=1'
+    - '__FLT32X_EPSILON__=2.22044604925031308084726333618164062e-16F32x'
+    - '__GCC_ATOMIC_WCHAR_T_LOCK_FREE=2'
+    - '__INT_LEAST16_WIDTH__=16'
+    - '__SIZEOF_WINT_T__=2'
+    - '__UINT64_TYPE__=long long unsigned int'
+    - '__INT_FAST16_TYPE__=short int'
+    - '__ORDER_PDP_ENDIAN__=3412'
+    - '__FLT64X_HAS_DENORM__=1'
+    - '__WCHAR_TYPE__=short unsigned int'
+    - '__FLT32_MANT_DIG__=24'
+    - '__UINTPTR_TYPE__=unsigned int'
+    - '__FLT64_HAS_QUIET_NAN__=1'
+    - '__FLT64X_MIN__=3.36210314311209350626267781732175260e-4932F64x'
+    - 'WIN32=1'
+    - '__FLT64_DIG__=15'
+    - '__SIZEOF_POINTER__=4'
+    - '__cpp_digit_separators=201309'
+    - '__GXX_EXPERIMENTAL_CXX0X__=1'
+    - '__DEC64_SUBNORMAL_MIN__=0.000000000000001E-383DD'
+    - '__WCHAR_WIDTH__=16'
+    - '__WINT_MAX__=0xffff'
+    - '_thiscall=__attribute__((__thiscall__))'
+Processing 'C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/Cantata/tests/atest_cov/atest_cov.cpp'...
+[ In file included at atest_cov.cpp:17
+  In file included at iostream:39
+  In file included at ostream:38
+  In file included at ios:39
+  In file included at exception:143
+  In file included at exception_ptr.h:40
+  ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:120.6 ]
+> void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+>       ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:122.6 ]
+> void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+>       ^
+[ ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:134.6 ]
+> void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+>       ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:136.6 ]
+> void* operator new[](std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+>       ^
+[ ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:168.13 ]
+> inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+>              ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:170.13 ]
+> inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+>              ^
+[ In file included at atest_cov.cpp:17
+  In file included at iostream:39
+  In file included at ostream:38
+  In file included at ios:42
+  In file included at ios_base.h:41
+  In file included at locale_classes.h:40
+  In file included at string:52
+  ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6702.35 ]
+>     operator""s(const char* __str, size_t __len)
+>                                    ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6708.38 ]
+>     operator""s(const wchar_t* __str, size_t __len)
+>                                       ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6715.39 ]
+>     operator""s(const char16_t* __str, size_t __len)
+>                                        ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6720.39 ]
+>     operator""s(const char32_t* __str, size_t __len)
+>                                        ^~~~~~~~~~~~
+Processing 'C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/cov.cpp'...
+[ In file included at cov.cpp:1
+  In file included at iostream:39
+  In file included at ostream:38
+  In file included at ios:39
+  In file included at exception:143
+  In file included at exception_ptr.h:40
+  ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:120.6 ]
+> void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+>       ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:122.6 ]
+> void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+>       ^
+[ ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:134.6 ]
+> void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+>       ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:136.6 ]
+> void* operator new[](std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT
+>       ^
+[ ERROR frontend_clang: 'operator new' takes type size_t ('unsigned long') as first parameter at new:168.13 ]
+> inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+>              ^
+[ ERROR frontend_clang: 'operator new[]' takes type size_t ('unsigned long') as first parameter at new:170.13 ]
+> inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+>              ^
+[ In file included at cov.cpp:1
+  In file included at iostream:39
+  In file included at ostream:38
+  In file included at ios:42
+  In file included at ios_base.h:41
+  In file included at locale_classes.h:40
+  In file included at string:52
+  ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6702.35 ]
+>     operator""s(const char* __str, size_t __len)
+>                                    ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6708.38 ]
+>     operator""s(const wchar_t* __str, size_t __len)
+>                                       ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6715.39 ]
+>     operator""s(const char16_t* __str, size_t __len)
+>                                        ^~~~~~~~~~~~
+[ ERROR frontend_clang: invalid literal operator parameter type 'std::size_t' (aka 'unsigned int'), did you mean 'unsigned long'? at basic_string.h:6720.39 ]
+>     operator""s(const char32_t* __str, size_t __len)
+>                                        ^~~~~~~~~~~~
+***
+*** Preprocessing terminated on 2022/02/11 at 17:33:52
+***
+***
+*** Frontend used not more than 31 MB (RSS 31 MB) of memory (total time 0:02 minutes)
+***
+/* Checking coding rules on original C++ source files */
+C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/Cantata/tests/atest_cov/atest_cov.cpp: checking... (file 1 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/iostream: checking... (file 2 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/c++config.h: checking... (file 3 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/os_defines.h: checking... (file 4 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/cpu_defines.h: checking... (file 5 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ostream: checking... (file 6 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ios: checking... (file 7 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/iosfwd: checking... (file 8 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stringfwd.h: checking... (file 9 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/memoryfwd.h: checking... (file 10 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/postypes.h: checking... (file 11 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cwchar: checking... (file 12 of 116)
+C:/qa_system/cantata/MinGW/include/wchar.h: checking... (file 13 of 116)
+C:/qa_system/cantata/MinGW/include/_mingw.h: checking... (file 14 of 116)
+C:/qa_system/cantata/MinGW/include/msvcrtver.h: checking... (file 15 of 116)
+C:/qa_system/cantata/MinGW/include/w32api.h: checking... (file 16 of 116)
+C:/qa_system/cantata/MinGW/include/sdkddkver.h: checking... (file 17 of 116)
+C:/qa_system/cantata/MinGW/include/features.h: checking... (file 18 of 116)
+C:/qa_system/cantata/MinGW/include/wctype.h: checking... (file 19 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/stddef.h: checking... (file 20 of 116)
+C:/qa_system/cantata/MinGW/include/sys/types.h: checking... (file 21 of 116)
+C:/qa_system/cantata/MinGW/include/stdio.h: checking... (file 22 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/stdarg.h: checking... (file 23 of 116)
+C:/qa_system/cantata/MinGW/include/stdlib.h: checking... (file 24 of 116)
+C:/qa_system/cantata/MinGW/include/direct.h: checking... (file 25 of 116)
+C:/qa_system/cantata/MinGW/include/sys/stat.h: checking... (file 26 of 116)
+C:/qa_system/cantata/MinGW/include/conio.h: checking... (file 27 of 116)
+C:/qa_system/cantata/MinGW/include/io.h: checking... (file 28 of 116)
+C:/qa_system/cantata/MinGW/include/stdint.h: checking... (file 29 of 116)
+C:/qa_system/cantata/MinGW/include/time.h: checking... (file 30 of 116)
+C:/qa_system/cantata/MinGW/include/locale.h: checking... (file 31 of 116)
+C:/qa_system/cantata/MinGW/include/process.h: checking... (file 32 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/exception: checking... (file 33 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/exception.h: checking... (file 34 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/exception_ptr.h: checking... (file 35 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/exception_defines.h: checking... (file 36 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/cxxabi_init_exception.h: checking... (file 37 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/typeinfo: checking... (file 38 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/hash_bytes.h: checking... (file 39 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/new: checking... (file 40 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/nested_exception.h: checking... (file 41 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/move.h: checking... (file 42 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/concept_check.h: checking... (file 43 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/type_traits: checking... (file 44 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/char_traits.h: checking... (file 45 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_algobase.h: checking... (file 46 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/functexcept.h: checking... (file 47 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/cpp_type_traits.h: checking... (file 48 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/type_traits.h: checking... (file 49 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/numeric_traits.h: checking... (file 50 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_pair.h: checking... (file 51 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_iterator_base_types.h: checking... (file 52 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_iterator_base_funcs.h: checking... (file 53 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/debug/assertions.h: checking... (file 54 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_iterator.h: checking... (file 55 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/ptr_traits.h: checking... (file 56 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/debug/debug.h: checking... (file 57 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/predefined_ops.h: checking... (file 58 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cstdint: checking... (file 59 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/stdint.h: checking... (file 60 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/localefwd.h: checking... (file 61 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/c++locale.h: checking... (file 62 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/clocale: checking... (file 63 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cctype: checking... (file 64 of 116)
+C:/qa_system/cantata/MinGW/include/ctype.h: checking... (file 65 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/ios_base.h: checking... (file 66 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/atomicity.h: checking... (file 67 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/gthr.h: checking... (file 68 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/gthr-default.h: checking... (file 69 of 116)
+C:/qa_system/cantata/MinGW/include/errno.h: checking... (file 70 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/atomic_word.h: checking... (file 71 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/locale_classes.h: checking... (file 72 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/string: checking... (file 73 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/allocator.h: checking... (file 74 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/c++allocator.h: checking... (file 75 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/new_allocator.h: checking... (file 76 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/ostream_insert.h: checking... (file 77 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/cxxabi_forced.h: checking... (file 78 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/stl_function.h: checking... (file 79 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/backward/binders.h: checking... (file 80 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/range_access.h: checking... (file 81 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/initializer_list: checking... (file 82 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/basic_string.h: checking... (file 83 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/alloc_traits.h: checking... (file 84 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/alloc_traits.h: checking... (file 85 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/ext/string_conversions.h: checking... (file 86 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cstdlib: checking... (file 87 of 116)
+C:/qa_system/cantata/MinGW/include/alloca.h: checking... (file 88 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/std_abs.h: checking... (file 89 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cstdio: checking... (file 90 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cerrno: checking... (file 91 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/functional_hash.h: checking... (file 92 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/basic_string.tcc: checking... (file 93 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/locale_classes.tcc: checking... (file 94 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/system_error: checking... (file 95 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/error_constants.h: checking... (file 96 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/stdexcept: checking... (file 97 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/streambuf: checking... (file 98 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/streambuf.tcc: checking... (file 99 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/basic_ios.h: checking... (file 100 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/locale_facets.h: checking... (file 101 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/cwctype: checking... (file 102 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/ctype_base.h: checking... (file 103 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/streambuf_iterator.h: checking... (file 104 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/mingw32/bits/ctype_inline.h: checking... (file 105 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/locale_facets.tcc: checking... (file 106 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/basic_ios.tcc: checking... (file 107 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/ostream.tcc: checking... (file 108 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/istream: checking... (file 109 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/bits/istream.tcc: checking... (file 110 of 116)
+C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/test_cov.h: checking... (file 111 of 116)
+C:/qa_system/cantata/inc/cantpp.h: checking... (file 112 of 116)
+C:/qa_system/cantata/MinGW/lib/gcc/mingw32/8.2.0/include/c++/stdlib.h: checking... (file 113 of 116)
+C:/qa_system/cantata/MinGW/include/string.h: checking... (file 114 of 116)
+C:/qa_system/cantata/MinGW/include/strings.h: checking... (file 115 of 116)
+C:/Users/PMN-GNC/Documents/test_cantata/test2/real_code/cov.cpp: checking... (file 116 of 116)
+***
+*** a3 for C server
+*** Version: 21.10
+*** Build: 9804194
+*** Tag: auto/2021/10/25/1917
+*** Working directory: D:/cantata-server-tmp/d1/12/1/
+*** Project name: real_code
+*** Description: n/A 
+*** Id: 12 
+*** Revision: 1
+*** Host: PMN-GNC (V10-5AFC60725863506B117FCE28476AC545-WINDOWS#21.10-b9804194)
+***
+***
+*** RuleChecker for C
+*** Version: 21.10
+*** Build: 9804194
+*** Tag: auto/2021/10/25/1917
+*** Comment mode: AAL
+*** Analysis started at 2022/02/11 17:33:54 (GMT+7)
+***
+/* Analyzer settings */
+/* ABI */
+Using predefined ABI Analyzer default
+/* Active rule checks */
+Eclipse:
+  Files:
+    <all files>
+  Rules:
+    A.5.1 (partial: invalid-directive)
+/* Filter patterns */
+/* External declarations */
+/* Parsing files */
+Parsed 0 physical lines of preprocessed code
+/* Checking coding rules on preprocessed C code */
+/* Checking coding rules on analysis results */
+***
+*** Analysis of project real_code with id 12 revision 1 terminated successfully on 2022/02/11 at 17:33:55
+***
+***
+*** Analysis used not more than 0 MB (RSS 0 MB) of memory (total analysis time 0:01 minutes)
+***
+/* Result summary */
+Errors:                       10
+Rule violations:               0
+Duration:                      3 s (3s)
+*** Batch processing finished (total runtime 0:06 minutes)

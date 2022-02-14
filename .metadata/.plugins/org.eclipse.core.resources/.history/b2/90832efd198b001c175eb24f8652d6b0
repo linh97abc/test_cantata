@@ -1,0 +1,16 @@
+===========================================================================
+= Cantata AutoTest Generation Report                                      =
+= (c) 2019 QA Systems GmbH                                                =
+=-------------------------------------------------------------------------=
+= Generation Date: Feb 11, 2022 4:06 PM                                   =
+===========================================================================
+0 functions fully tested.
+1 source files were skipped.
+Files fully tested:
+  - NONE
+
+Files not fully tested:
+  - NONE
+
+Files not tested:
+- cov.cpp (0 seconds)

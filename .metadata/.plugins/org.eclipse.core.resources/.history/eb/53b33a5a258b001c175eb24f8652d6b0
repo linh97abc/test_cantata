@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.absint.com/dtd/a3-results-21.10.xsd" xmlns="http://www.absint.com/a3results" build="9804194" tag="auto/2021/10/25/1917" version="21.10" target="C">
+    <result type="RuleChecker" analysis_status="success">
+        <analysis_id>8</analysis_id>
+        <revision>1</revision>
+        <name>real_code</name>
+        <success>true</success>
+        <errors>10</errors>
+        <rule_violations>0</rule_violations>
+    </result>
+</results>

@@ -1,0 +1,35 @@
+<associations>
+	<test>
+		<name>atest_stack</name>
+		<chksum>6e11cc354b6c253b8d1bf72135f601b616b0786941005a793fb4330383ece0e4</chksum>
+		<makefile>atest_stack/test.mk</makefile>
+		<depends>
+			<depend>
+				<file>../../stack.cpp</file>
+				<chksum>566b644ed2948a17f62fa2c7147ac4c6ce857f862fd90536fae3e0cf09f35b3b</chksum>
+			</depend>
+			<depend>
+				<file>atest_stack/atest_stack.cpp</file>
+				<chksum>66f6588004707cd24d0708808fb12048b50cb8fb128c9536f761b2674ee33d08</chksum>
+			</depend>
+			<depend>
+				<file>../../ipg.cop</file>
+				<chksum>64408dbef241800ae3d076caa073561da04d32c8e776fc7a90b51f0a04ed0626</chksum>
+			</depend>
+			<depend>
+				<file>../../stack.h</file>
+				<chksum>be871d56a72a0da327ed90daff2f740a6a9a1d7b408a0e1d2eb3f024c8db9df2</chksum>
+			</depend>
+			<depend>
+				<file>atest_stack/ipg.cop</file>
+				<chksum>07e200a78f2c36e499cd56bee8c2f4ca92fcaa09b2c48750b5b06c3d2cf08567</chksum>
+			</depend>
+		</depends>
+		<outputs>
+			<output>
+				<file>atest_stack/atest_stack.ctr</file>
+				<chksum>993abed5ae296ac2d4d6a73cb84e3284ec8ddf2d0685dfa9e135cd5229c658c8</chksum>
+			</output>
+		</outputs>
+	</test>
+</associations>

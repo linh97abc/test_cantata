@@ -1,0 +1,767 @@
+0000000FCANTPP CTG FILE0009000500000000
+00d5
+#001batest_stack/atest_stack.cpp
+#0003136
+1065
+#0098= Cantata Test Harness v9.5                                               =
+= (c) 2021 QA Systems GmbH                                                =
+
+#004c= Test Description: stack                                                 =
+
+#004c=    Configuration: x86-Win32-gpp4.9.2                                    =
+
+#004c=     Test Started: Fri Feb 11 15:47:38 2022                              =
+
+00d5
+#001batest_stack/atest_stack.cpp
+#0003170
+2068
+#00081: Stack
+#000cdefault case
+00d5
+#001batest_stack/atest_stack.cpp
+#0003174
+52bc
+0025
+00d5
+#001batest_stack/atest_stack.cpp
+#0003175
+5052
+0005
+#0018returnValue->head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003187
+#0006PASS: 
+#0018returnValue->head = NULL
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003190
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003191
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003192
+56bd
+001a
+0018
+8069
+#00081: Stack
+00d5
+#001batest_stack/atest_stack.cpp
+#0003198
+2068
+#00172: Stack(const Stack &)
+#000cdefault case
+00d5
+#001batest_stack/atest_stack.cpp
+#0003202
+52bc
+0025
+00d5
+#001batest_stack/atest_stack.cpp
+#0003203
+5052
+0005
+#0018returnValue->head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003217
+#0006PASS: 
+#0018returnValue->head = NULL
+0005
+#0011stack.head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003218
+#0006PASS: 
+#0011stack.head = NULL
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003221
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003222
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003223
+56bd
+001a
+0018
+8069
+#00172: Stack(const Stack &)
+00d5
+#001batest_stack/atest_stack.cpp
+#0003229
+2068
+#00173: Stack(const Stack &)
+#0041created to solve true case of stack_ptr != NULL at line number 31
+00d5
+#001batest_stack/atest_stack.cpp
+#0003233
+52bc
+0025
+001c
+#0012Stack::push(int)#1
+00d5
+#001batest_stack/atest_stack.cpp
+#0003234
+5052
+00d5
+#001batest_stack/atest_stack.cpp
+#0003444
+00d5
+#001batest_stack/atest_stack.cpp
+#0003444
+52be
+0005
+0023
+#0010Stack::push(int)
+52bf
+0005
+0024
+#00011
+0019
+#0012Stack::push(int)#1
+0005
+#0009value = 0
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003447
+#0006PASS: 
+#0009value = 0
+0005
+#0018returnValue->head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003250
+#0006PASS: 
+#0018returnValue->head = NULL
+0005
+#001fstack.head = &map_stack_head[0]
+#00080x442044
+50ba
+#001batest_stack/atest_stack.cpp
+#0003251
+#0006PASS: 
+#001fstack.head = &map_stack_head[0]
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003254
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003255
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003256
+56bd
+001a
+0018
+#0012Stack::push(int)#1
+8069
+#00173: Stack(const Stack &)
+00d5
+#001batest_stack/atest_stack.cpp
+#0003262
+2068
+#000b4: is_empty
+#000cdefault case
+00d5
+#001batest_stack/atest_stack.cpp
+#0003266
+52bc
+0025
+00d5
+#001batest_stack/atest_stack.cpp
+#0003267
+5052
+0005
+#0014testObj->head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003285
+#0006PASS: 
+#0014testObj->head = NULL
+0005
+#0012returnValue = true
+#00011
+50ba
+#001batest_stack/atest_stack.cpp
+#0003286
+#0006PASS: 
+#0012returnValue = true
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003289
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003290
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003291
+56bd
+001a
+0018
+8069
+#000b4: is_empty
+00d5
+#001batest_stack/atest_stack.cpp
+#0003297
+2068
+#000c5: push(int)
+#000cdefault case
+00d5
+#001batest_stack/atest_stack.cpp
+#0003301
+52bc
+0025
+001c
+#001boperator_new(std::size_t)#1
+00d5
+#001batest_stack/atest_stack.cpp
+#0003302
+5052
+00d5
+#001batest_stack/atest_stack.cpp
+#0003477
+00d5
+#001batest_stack/atest_stack.cpp
+#0003477
+52be
+0005
+0023
+#0019operator_new(std::size_t)
+52bf
+0005
+0024
+#00011
+0019
+#001boperator_new(std::size_t)#1
+0005
+#000fcppsm_size = 8U
+#00018
+50ba
+#001batest_stack/atest_stack.cpp
+#0003480
+#0006PASS: 
+#000fcppsm_size = 8U
+0005
+#002atestObj->head = &map_operator_new_call1[0]
+#00080x44204c
+50ba
+#001batest_stack/atest_stack.cpp
+#0003322
+#0006PASS: 
+#002atestObj->head = &map_operator_new_call1[0]
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003325
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003326
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003327
+56bd
+001a
+0018
+#001boperator_new(std::size_t)#1
+8069
+#000c5: push(int)
+00d5
+#001batest_stack/atest_stack.cpp
+#0003333
+2068
+#000c6: push(int)
+#0030created to solve catch handler at line number 73
+00d5
+#001batest_stack/atest_stack.cpp
+#0003337
+52bc
+0025
+001c
+#001boperator_new(std::size_t)#2
+00d5
+#001batest_stack/atest_stack.cpp
+#0003338
+5052
+00d5
+#001batest_stack/atest_stack.cpp
+#0003477
+00d5
+#001batest_stack/atest_stack.cpp
+#0003477
+52be
+0005
+0023
+#0019operator_new(std::size_t)
+52bf
+0005
+0024
+#00012
+0019
+#001boperator_new(std::size_t)#2
+0005
+#000fcppsm_size = 8U
+#00018
+50ba
+#001batest_stack/atest_stack.cpp
+#0003484
+#0006PASS: 
+#000fcppsm_size = 8U
+00d5
+#001batest_stack/atest_stack.cpp
+#0003359
+5b57
+#003a
+PASSED: Expected Exception: Stack::new_error thrownValue
+
+50ba
+#001batest_stack/atest_stack.cpp
+#0003359
+#0006PASS: 
+#0031 Expected Exception: Stack::new_error thrownValue
+00d5
+#001batest_stack/atest_stack.cpp
+#0003360
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003361
+56bd
+001a
+0018
+#001boperator_new(std::size_t)#2
+8069
+#000c6: push(int)
+00d5
+#001batest_stack/atest_stack.cpp
+#0003367
+2068
+#00067: pop
+#000cdefault case
+00d5
+#001batest_stack/atest_stack.cpp
+#0003371
+52bc
+0025
+001c
+#0013Stack::is_empty()#1
+#0019operator_delete(void *)#1
+00d5
+#001batest_stack/atest_stack.cpp
+#0003372
+5052
+00d5
+#001batest_stack/atest_stack.cpp
+#0003519
+00d5
+#001batest_stack/atest_stack.cpp
+#0003519
+52be
+0005
+0023
+#0011Stack::is_empty()
+52bf
+0005
+0024
+#00011
+0019
+#0013Stack::is_empty()#1
+00d5
+#001batest_stack/atest_stack.cpp
+#0003559
+00d5
+#001batest_stack/atest_stack.cpp
+#0003559
+52be
+0005
+0023
+#0017operator_delete(void *)
+52bf
+0005
+0024
+#00011
+0019
+#0013Stack::is_empty()#1
+#0019operator_delete(void *)#1
+0005
+#0023param_1 = &map_testObj_head[0].data
+#00080x442054
+50ba
+#001batest_stack/atest_stack.cpp
+#0003562
+#0006PASS: 
+#0023param_1 = &map_testObj_head[0].data
+0005
+#0024(*((Stack::node*) param_1)).data = 0
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003563
+#0006PASS: 
+#0024(*((Stack::node*) param_1)).data = 0
+0005
+#0027(*((Stack::node*) param_1)).next = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003564
+#0006PASS: 
+#0027(*((Stack::node*) param_1)).next = NULL
+0005
+#0014testObj->head = NULL
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003394
+#0006PASS: 
+#0014testObj->head = NULL
+0005
+#000freturnValue = 0
+#00010
+50ba
+#001batest_stack/atest_stack.cpp
+#0003395
+#0006PASS: 
+#000freturnValue = 0
+30b9
+0005
+#000emap_stack_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000259
+#0006PASS: 
+#000emap_stack_head
+30b9
+0005
+#0016map_operator_new_call1
+50ba
+#001batest_stack/atest_stack.cpp
+#000260
+#0006PASS: 
+#0016map_operator_new_call1
+30b9
+0005
+#0010map_testObj_head
+50ba
+#001batest_stack/atest_stack.cpp
+#000261
+#0006PASS: 
+#0010map_testObj_head
+00d5
+#001batest_stack/atest_stack.cpp
+#0003398
+5355
+00d5
+#001batest_stack/atest_stack.cpp
+#0003399
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003400
+56bd
+001a
+0018
+#0013Stack::is_empty()#1
+#0019operator_delete(void *)#1
+8069
+#00067: pop
+00d5
+#001batest_stack/atest_stack.cpp
+#0003406
+2068
+#00068: pop
+#003acreated to solve true case of is_empty() at line number 84
+00d5
+#001batest_stack/atest_stack.cpp
+#0003410
+52bc
+0025
+001c
+#0013Stack::is_empty()#2
+00d5
+#001batest_stack/atest_stack.cpp
+#0003411
+5052
+00d5
+#001batest_stack/atest_stack.cpp
+#0003519
+00d5
+#001batest_stack/atest_stack.cpp
+#0003519
+52be
+0005
+0023
+#0011Stack::is_empty()
+52bf
+0005
+0024
+#00012
+0019
+#0013Stack::is_empty()#2
+00d5
+#001batest_stack/atest_stack.cpp
+#0003430
+5b57
+#003a
+PASSED: Expected Exception: Stack::empty_pop thrownValue
+
+50ba
+#001batest_stack/atest_stack.cpp
+#0003430
+#0006PASS: 
+#0031 Expected Exception: Stack::empty_pop thrownValue
+00d5
+#001batest_stack/atest_stack.cpp
+#0003431
+5054
+00d5
+#001batest_stack/atest_stack.cpp
+#0003432
+56bd
+001a
+0018
+#0013Stack::is_empty()#2
+8069
+#00068: pop
+00d5
+#001batest_stack/atest_stack.cpp
+#000288
+2068
+#0011COVERAGE RULE SET
+#0046100% Entry Point + Statement + Call Return + Decision + MC/DC Coverage
+0005
+0010
+#0019100% Entry Point Coverage
+000e
+#0003100
+0013
+#0003100
+0015
+#0003100
+50ba
+#001batest_stack/atest_stack.cpp
+#000299
+#0006PASS: 
+#0019100% Entry Point Coverage
+0005
+0010
+#0017100% Statement Coverage
+000e
+#0003100
+0013
+#0003100
+0015
+#0003100
+50ba
+#001batest_stack/atest_stack.cpp
+#0003103
+#0006PASS: 
+#0017100% Statement Coverage
+0005
+0010
+#0019100% Call Return Coverage
+000e
+#0003100
+0013
+#0003100
+0015
+#0003100
+50ba
+#001batest_stack/atest_stack.cpp
+#0003107
+#0006PASS: 
+#0019100% Call Return Coverage
+0005
+0010
+#0016100% Decision Coverage
+000e
+#0003100
+0013
+#0003100
+0015
+#0003100
+50ba
+#001batest_stack/atest_stack.cpp
+#0003111
+#0006PASS: 
+#0016100% Decision Coverage
+0005
+0010
+#002b100% Boolean Operand Effectiveness Coverage
+000e
+#0003100
+0013
+#0003100
+0015
+#0003100
+50ba
+#001batest_stack/atest_stack.cpp
+#0003115
+#0006PASS: 
+#002b100% Boolean Operand Effectiveness Coverage
+8069
+#0011COVERAGE RULE SET
+9066
+#0051= Test Finished: Fri Feb 11 15:47:38 2022                                      =
+
+#0051= 1: Stack                       0       0       5       0         0      PASS =
+
+#0051= 2: Stack(const Stack &)        0       0       6       0         0      PASS =
+
+#0051= 3: Stack(const Stack &)        0       0       7       0         0      PASS =
+
+#0051= 4: is_empty                    0       0       6       0         0      PASS =
+
+#0051= 5: push(int)                   0       0       6       0         0      PASS =
+
+#0051= 6: push(int)                   0       0       2       0         0      PASS =
+
+#0051= 7: pop                         0       0       9       0         0      PASS =
+
+#0051= 8: pop                         0       0       1       0         0      PASS =
+
+#0051= COVERAGE RULE SET              0       0       5       0         0      PASS =
+
+#0051= Other                          0       0       0       0         0      PASS =
+
+#0051= TOTALS                         0       0      47       0         0      PASS =
+

@@ -1,0 +1,92 @@
+15:44:22 **** Building Selected Files of configuration Debug for project test ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o stack.o "..\\stack.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Warning CCD1128: Your configuration requires that the compiler define
+                 /D_HAS_VARIABLE_TEMPLATES=0 is used.
+                 Forcing the addition of this define.
+Section: x86-Win32-5.x-msvc14
+ - NOT registered, please register to enable better technical support
+Processing ..\stack.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+C:\qa_system\cantata\inc\cpprtti.h(25) : fatal error I10717: cannot open source file "typeinfo"
+#include <typeinfo>
+                   ^
+15:44:49 **** Building Selected Files of configuration Debug for project test ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o stack.o "..\\stack.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ..\stack.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+15:51:27 **** Building Selected Files of configuration Debug for project real_code ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o cov.o "..\\cov.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Warning CCD1128: Your configuration requires that the compiler define
+                 /D_HAS_VARIABLE_TEMPLATES=0 is used.
+                 Forcing the addition of this define.
+Section: x86-Win32-5.x-msvc14
+ - NOT registered, please register to enable better technical support
+Processing ..\cov.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+C:\qa_system\cantata\inc\cpprtti.h(25) : fatal error I10717: cannot open source file "typeinfo"
+#include <typeinfo>
+                   ^
+15:51:41 **** Building Selected Files of configuration Debug for project real_code ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o cov.o "..\\cov.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ..\cov.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+15:57:49 **** Building Selected Files of configuration Debug for project real_code ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o cov.o "..\\cov.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ..\cov.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+16:05:39 **** Building Selected Files of configuration Debug for project real_code ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o cov.o "..\\cov.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Warning CCD0401: Unknown option specified: --suppress_instantiation:*
+Warning CCD0401: Unknown option specified: --suppress_instantiation:*::*
+Warning CCD0401: Unknown option specified: --suppress_instantiation:*::*::*
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ..\cov.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
+16:06:43 **** Building Selected Files of configuration Debug for project real_code ****
+Info: Internal Builder is used for build
+ipg_comp --optfile ../ipg.cop --comp g++ -IC:/qa_system/cantata/inc -O0 -g3 -Wall -c -fmessage-length=0 -o cov.o "..\\cov.cpp" 
+Cantata IPG_COMP v9.5 (c) 2021 QA Systems GmbH 
+Cantata CPPCCD v9.5 (c) 2021 QA Systems GmbH
+Section: x86-Win32-gpp4.9.2
+ - registered as an AUTHORISED PLATFORM
+Processing ..\cov.cpp
+Cantata CPPI   v9.5 (c) 2021 QA Systems GmbH
+Warning I10840: "C:/qa_system/cantata/inc" was specified as both a system and non-system
+include directory -- the non-system entry will be ignored
